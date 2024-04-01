@@ -1,0 +1,14 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+.container {
+  background-color: v.$color-white;
+  border-radius: 17px;
+  width: 250px;
+  text-align: center;
+
+  p {
+    @include m.typography(18px, 21px, 700, v.$color-dark-blue);
+    width: fit-content;
+  }
+}

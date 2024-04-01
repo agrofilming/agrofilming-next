@@ -1,0 +1,37 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+.container {
+  @include m.flex(60px, center, center, column);
+  position: relative;
+  background: url('/youtube-bg.webp');
+  background-size: cover;
+  min-height: 100vh;
+  padding: 50px;
+
+  h2 {
+    @include m.typography(54px, 62px, 500, v.$color-cream-light);
+    text-align: center;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  button {
+    @include m.typography(16px, 21px, 500, v.$color-cream-light);
+    width: 220px;
+    height: 72px;
+    background-color: v.$color-red;
+    border-radius: 15px;
+    border: 2px solid v.$color-cream-light;
+    cursor: pointer;
+    box-shadow: 0 0 34px 9px #fc4800;
+    transition: all 0.5s ease;
+
+    &:hover {
+      scale: 1.1;
+      transition: all 0.5s ease;
+    }
+  }
+}

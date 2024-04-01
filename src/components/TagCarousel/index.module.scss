@@ -1,0 +1,60 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+$animationSpeed: 20s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(250px);
+  }
+  50% {
+    transform: translateX(calc(-250px * 8));
+  }
+  100% {
+    transform: translateX(250px);
+  }
+}
+
+// Styling
+.container {
+  background: v.$color-white;
+  @include m.flex(10px, center, center);
+  height: 60px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+
+  &::before,
+  &::after {
+    background: linear-gradient(to right, v.$color-white 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    @include m.flex(10px, center, center);
+    width: calc(250px * 21);
+  }
+
+  .slide {
+    @include m.flex(0, center, center);
+    width: 250px;
+  }
+}

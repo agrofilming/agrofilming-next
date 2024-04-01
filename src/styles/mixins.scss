@@ -1,0 +1,43 @@
+@use 'variables' as v;
+
+$breakpoints: (
+        'sm': 550px,
+        'md': 768px,
+        'lg': 1024px,
+        'xl': 1440px,
+        'xxl': 2560px,
+) !default;
+
+@mixin respond($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin flex($gap: 10px, $align: center, $justify: space-between, $direction: row, $wrap: nowrap) {
+  display: flex;
+  gap: $gap;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin typography($size: 14px, $height: 17px, $weight: 500, $color: v.$color-black) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin container($padding: 0px 50px, $color: v.$color-white) {
+  padding: $padding;
+  background-color: $color;
+}
+

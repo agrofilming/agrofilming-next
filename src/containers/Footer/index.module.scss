@@ -1,0 +1,93 @@
+@use 'src/styles/mixins' as m;
+@use 'src/styles/variables' as v;
+
+.container {
+  @include m.container(20px 50px, v.$color-dark-blue);
+  @include m.flex(0, flex-end, space-between);
+  padding-top: 40px;
+
+  .copyright {
+    position: relative;
+
+    .logo {
+      max-width: 640px;
+      height: auto;
+      position: absolute;
+      left: -50px;
+      bottom: -20px;
+      z-index: 0;
+    }
+
+    span {
+      padding-left: 200px;
+      @include m.typography(14px, 17px, 400, v.$color-white)
+    }
+  }
+
+  .nav {
+    @include m.flex(10px, flex-start, space-between, column);
+    position: relative;
+    z-index: 2;
+
+    .nav-top-section {
+      @include m.flex(10px, flex-start, space-between);
+    }
+
+    .nav-bottom-section {
+      .contacts-item {
+        @include m.flex(20px, center, flex-start);
+        width: 400px;
+      }
+    }
+
+    .main-nav, .posts, .contacts {
+      @include m.flex(5px, flex-start, flex-start, column)
+    }
+
+  }
+
+  .right-block {
+    @include m.flex(80px, flex-start, space-between, column);
+    align-self: flex-start;
+
+    .posts, .partners {
+      @include m.flex(5px, flex-start, flex-start, column)
+    }
+
+    .partners-items {
+      @include m.flex(20px, flex-start, flex-start);
+
+      .garmari {
+        @include m.flex(5px, flex-start, flex-start, column);
+
+        img {
+          max-width: 120px;
+          height: auto;
+        }
+      }
+
+      .vasko {
+        img {
+          max-width: 40px;
+          height: auto;
+        }
+      }
+    }
+
+    p {
+      @include m.typography(15px, 24px, 500, v.$color-cream);
+      padding: 5px;
+    }
+  }
+
+  a {
+    @include m.typography(15px, 24px, 500, v.$color-cream);
+    padding: 5px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid v.$color-cream;
+      border-radius: 10px;
+    }
+  }
+}

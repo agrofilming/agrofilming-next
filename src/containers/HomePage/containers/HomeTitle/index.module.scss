@@ -1,0 +1,98 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(v.$color-white, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(v.$color-white, 0);
+  }
+}
+
+@keyframes pulseButton {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100vw;
+
+  p {
+    @include m.typography(17px, 21px, 300, v.$color-white);
+    position: absolute;
+    top: 130px;
+    left: 50px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+
+    span {
+      @include m.typography(107px, 120px, 900, #ffffff00);
+      -webkit-text-stroke-width: 2px;
+      stroke: v.$color-white;
+      -webkit-text-stroke-color: v.$color-white;
+      stroke-width: 2px;
+    }
+  }
+
+  .video-button {
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    top: 55%;
+    left: 45%;
+
+    &:before {
+      content: '';
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      z-index: -1;
+      cursor: pointer;
+      box-shadow: 0 0 0 0 rgba(v.$color-white, 0.9);
+      animation: pulse 1.5s infinite;
+    }
+
+    svg {
+      animation: pulseButton 1.5s infinite;
+    }
+
+    &:hover {
+      svg {
+        circle {
+          stroke: v.$color-white;
+          fill: v.$color-white;
+        }
+
+        path {
+          fill: v.$color-red;
+        }
+      }
+    }
+  }
+
+  .video-bg {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+  }
+}

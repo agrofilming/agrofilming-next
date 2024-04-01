@@ -1,0 +1,15 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+.container {
+  @include m.flex(0, center, center);
+  width: 160px;
+  height: 160px;
+  background: v.$color-white;
+  border-radius: 15px;
+
+  img {
+    max-width: 150px;
+    height: auto;
+  }
+}

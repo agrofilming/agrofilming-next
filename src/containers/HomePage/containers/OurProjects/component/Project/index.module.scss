@@ -1,0 +1,60 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+.container {
+  width: 300px;
+  height: auto;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .hover {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+    overflow: hidden;
+
+    h4 {
+      @include m.typography(24px, 27px, 500, v.$color-dark-green);
+      transform: translateY(-60px);
+    }
+
+    p {
+      @include m.typography(24px, 27px, 300, v.$color-dark-green);
+      transform: translateY(60px);
+    }
+
+    .line {
+      height: 2px;
+      background-color: v.$color-dark-green;
+      width: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &:hover {
+    .hover {
+      h4 {
+        transform: translateY(0);
+        transition: all 1s ease;
+      }
+
+      p {
+        transform: translateY(0);
+        transition: all 1s ease;
+      }
+
+      .line {
+        width: 200px;
+        transition: all 1s ease;
+      }
+    }
+  }
+}

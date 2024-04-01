@@ -1,0 +1,37 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+.container {
+  @include m.flex(30px, flex-start, center, column);
+  padding: 30px 0 30px 30px;
+
+  .top-block {
+    @include m.flex(30px, center, space-between);
+    width: 100%;
+    padding-right: 160px;
+
+    h2 {
+      @include m.typography(59px, 65px, 700, v.$color-grey);
+      text-align: center;
+    }
+
+    img {
+      max-width: 600px;
+      height: auto;
+    }
+  }
+
+  .bottom-block {
+    @include m.flex(30px, center, center);
+    width: 100%;
+
+    img {
+      max-width: 800px;
+      height: auto;
+    }
+
+    video {
+      width: 300px;
+    }
+  }
+}

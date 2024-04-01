@@ -1,0 +1,72 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(var(--container-color-opacity), 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(var(--container-color-opacity), 0);
+  }
+}
+
+@keyframes vibration {
+  0% {
+    transform: rotate(0);
+  }
+  33% {
+    transform: rotate(-35deg);
+  }
+  66% {
+    transform: rotate(35deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.container {
+  @include m.flex(0, center, center);
+  position: fixed;
+  z-index: 99;
+  right: 50px;
+  bottom: var(--container-bottom);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  .block {
+    @include m.flex(0, center, center);
+    background-color: var(--container-color-main);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+
+    svg {
+      max-width: 25px;
+      max-height: 25px;
+      animation: vibration 1.5s infinite;
+    }
+
+    &:before {
+      content: '';
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: var(--container-color-opacity);
+      box-shadow: 0 0 0 0 rgba(var(--container-color-opacity), 0.9);
+      animation: pulse 1s infinite;
+    }
+  }
+}

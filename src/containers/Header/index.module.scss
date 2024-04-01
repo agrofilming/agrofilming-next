@@ -1,0 +1,29 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+.container {
+  @include m.container(10px 50px, #000000cc);
+  @include m.flex(0, center, space-between);
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+
+  .nav {
+    @include m.flex(0, center, space-between);
+
+    a {
+      padding: 10px;
+
+      &:hover {
+        padding-bottom: 7px;
+        color: v.$color-green;
+        border-bottom: 3px solid v.$color-green;
+      }
+    }
+  }
+
+  img {
+    max-width: 120px;
+    height: auto;
+  }
+}

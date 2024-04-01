@@ -1,0 +1,35 @@
+@use '@/styles/variables' as v;
+@use '@/styles/mixins' as m;
+
+.container {
+  @include m.flex(30px, flex-start, flex-start, column);
+  height: 90vh;
+  background-image: url('/grass-bg.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+
+  .top-block {
+    @include m.flex(30px, center, space-between);
+    width: 100%;
+
+    .title {
+      padding-left: 150px;
+
+      h2 {
+        @include m.typography(70px, 70px, 700, v.$color-white);
+      }
+    }
+
+    img {
+      max-width: 500px;
+      height: auto;
+    }
+  }
+
+  .partners {
+    width: 100%;
+    @include m.flex(10px, center, center);
+  }
+}

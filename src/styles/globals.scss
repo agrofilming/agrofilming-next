@@ -1,0 +1,79 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    local('Roboto-Regular'),
+    url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    local('Roboto-Medium'),
+    url('../assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    local('Roboto-Bold'),
+    url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    local('Roboto-Bold'),
+    url('../assets/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+html,
+html *,
+html *::before,
+html *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: v.$color-white;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+}
+
+body.hidden {
+  overflow-y: hidden;
+}
+
+h1 {
+  @include m.typography(107px, 120px, 900, v.$color-white);
+}
+
+a {
+  @include m.typography(18px, 24px, 700, v.$color-white);
+  text-decoration: none;
+  text-transform: none;
+}
+
+video {
+  width: 80vw;
+}
+
+//.green-seeker {
+//  position: fixed;
+//
+//}
