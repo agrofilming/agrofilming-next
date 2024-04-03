@@ -22,24 +22,29 @@
     overflow: hidden;
 
     h4 {
-      @include m.typography(24px, 27px, 500, v.$color-dark-green);
+      @include m.typography(24px, 27px, 700, v.$color-white);
       transform: translateY(-60px);
     }
 
     p {
-      @include m.typography(24px, 27px, 300, v.$color-dark-green);
+      @include m.typography(24px, 27px, 500, v.$color-white);
       transform: translateY(60px);
     }
 
     .line {
       height: 2px;
-      background-color: v.$color-dark-green;
+      background-color: v.$color-white;
       width: 0;
       margin: 0 auto;
     }
   }
 
   &:hover {
+
+    img {
+      opacity: 0.5;
+    }
+
     .hover {
       h4 {
         transform: translateY(0);
