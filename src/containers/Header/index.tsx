@@ -12,9 +12,9 @@ export const Header = () => (
       <Image src={logo} alt="logo" />
     </Link>
     <div className={styles.nav}>
-      <Link href="/">Головна</Link>
+      <Link href="/#portfolio">Портфоліо</Link>
       <Link href="/blog">Блог</Link>
-      <Link href="/">Портфоліо</Link>
+      <Link href="/#contacts">Контакти</Link>
     </div>
   </header>
 );
