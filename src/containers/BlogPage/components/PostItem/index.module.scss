@@ -3,7 +3,8 @@
 
 .container {
   @include m.flex(20px, center, flex-start, column);
-  max-width: 600px;
+  width: 100%;
+  max-width: 900px;
   padding: 10px;
   border-radius: 15px;
   background: v.$color-cream-light;
