@@ -13,7 +13,7 @@ export const Header = () => (
     </Link>
     <div className={styles.nav}>
       <Link href="/">Головна</Link>
-      <Link href="/">Блог</Link>
+      <Link href="/blog">Блог</Link>
       <Link href="/">Портфоліо</Link>
     </div>
   </header>
