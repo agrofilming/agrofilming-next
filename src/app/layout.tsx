@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={roboto.className}>
       <body>
         <Header />
-        {children}
+        <main>{children}</main>
         <TagCarousel />
         <LeadSeeker
           colorMain={'#1C9E00'}
