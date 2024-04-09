@@ -126,7 +126,7 @@ export const OurProjects = () => {
   );
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={'portfolio'}>
       <h2 className={rubik.className}>НАШІ РОБОТИ</h2>
       <div className={styles.projects}>{renderProjects}</div>
       <div className={cn(styles['more-button'], { [styles.open]: isOpen })} onClick={() => setIsOpen(true)}>

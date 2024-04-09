@@ -10,6 +10,7 @@ import { roboto } from './fonts';
 import { LeadSeeker } from '@/components/LeadSeaker';
 import { MailIcon } from '@/assets/icons/mailIcon';
 import { PhoneIcon } from '@/assets/icons/phoneIcon';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AgroFilmProduction – СТВОРЮЄМО ВІДЕО ДЛЯ АГРОБІЗНЕСУ',
@@ -27,22 +28,26 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <TagCarousel />
-        <LeadSeeker
-          colorMain={'#1C9E00'}
-          colorWithOpacity={'#1C9E0080'}
-          containerBottom={'120px'}
-          className={'green-seeker'}
-        >
-          <MailIcon />
-        </LeadSeeker>
-        <LeadSeeker
-          colorMain={'#2196F3'}
-          colorWithOpacity={'#2196F380'}
-          containerBottom={'50px'}
-          className={'green-seeker'}
-        >
-          <PhoneIcon />
-        </LeadSeeker>
+        <Link href="mailto:producer@agrofilming.com">
+          <LeadSeeker
+            colorMain={'#1C9E00'}
+            colorWithOpacity={'#1C9E0080'}
+            containerBottom={'120px'}
+            className={'green-seeker'}
+          >
+            <MailIcon />
+          </LeadSeeker>
+        </Link>
+        <Link href="tel:+380688880710">
+          <LeadSeeker
+            colorMain={'#2196F3'}
+            colorWithOpacity={'#2196F380'}
+            containerBottom={'50px'}
+            className={'green-seeker'}
+          >
+            <PhoneIcon />
+          </LeadSeeker>
+        </Link>
         <Footer />
       </body>
     </html>
