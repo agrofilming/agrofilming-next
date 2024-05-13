@@ -1,0 +1,31 @@
+@use 'src/styles/variables' as v;
+@use 'src/styles/mixins' as m;
+
+.container {
+  @include m.flex(30px, flex-start, center);
+  padding: 100px 0;
+  background: v.$color-white;
+
+  .left-block {
+    @include m.flex(30px, flex-start, center, column);
+
+    a {
+      color: v.$color-cream;
+    }
+
+    h1 {
+      @include m.typography(57px, 60px, 900, v.$color-black);
+      max-width: 600px;
+    }
+  }
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  .buttons {
+    @include m.flex(50px, center, center);
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}

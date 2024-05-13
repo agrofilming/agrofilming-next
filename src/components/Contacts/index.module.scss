@@ -1,0 +1,11 @@
+@use 'src/styles/variables' as v;
+@use 'src/styles/mixins' as m;
+
+.contacts {
+  @include m.flex(5px, flex-start, flex-start, column);
+
+  .contacts-item {
+    @include m.flex(20px, center, flex-start);
+    width: 400px;
+  }
+}

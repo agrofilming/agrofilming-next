@@ -1,15 +1,9 @@
-import cn from "classnames";
-import {
-  FC,
-  ReactNode,
-  ReactPortal,
-  SyntheticEvent,
-  useLayoutEffect,
-  useState,
-} from "react";
-import { createPortal } from "react-dom";
+'use client';
+import cn from 'classnames';
+import { FC, ReactNode, ReactPortal, SyntheticEvent, useLayoutEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 export interface IModalProps {
   children: ReactNode;
@@ -43,24 +37,21 @@ export const ModalComponent: FC<IModalProps> = ({
   };
 
   const escListener = (event: KeyboardEvent) => {
-    if (event.code === "Escape" && shouldCloseByEsc && onClose) onClose();
+    if (event.code === 'Escape' && shouldCloseByEsc && onClose) onClose();
   };
 
   useLayoutEffect(() => {
-    const el = document.createElement("div");
-    el.classList.add("modal-root");
+    const el = document.createElement('div');
+    el.classList.add('modal-root');
     document.body.appendChild(el);
-    document.addEventListener("keydown", escListener);
+    document.addEventListener('keydown', escListener);
 
     setContainerEl(
       createPortal(
-        <div
-          className={cn(styles.wrapper, { [styles.open]: isOpen })}
-          onClick={handleOutsideClick}
-        >
+        <div className={cn(styles.wrapper, { [styles.open]: isOpen })} onClick={handleOutsideClick}>
           <div
             className={cn(styles.child, classes)}
-            onClick={(e) => {
+            onClick={e => {
               stopPropagation(e);
               handleChildClick();
             }}
@@ -73,12 +64,12 @@ export const ModalComponent: FC<IModalProps> = ({
     );
 
     if (isOpen) {
-      document.body.classList.add("hidden");
+      document.body.classList.add('hidden');
     }
 
     return () => {
       document.body.removeChild(el);
-      document.body.classList.remove("hidden");
+      document.body.classList.remove('hidden');
       setContainerEl(null);
     };
   }, [isOpen]);

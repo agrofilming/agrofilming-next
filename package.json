@@ -11,10 +11,15 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@react-input/mask": "^1.2.3",
+    "@types/body-scroll-lock": "^3.1.2",
+    "antd": "^5.17.0",
+    "body-scroll-lock": "^4.0.0-beta.0",
     "classnames": "^2.5.1",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.51.4",
     "sass": "^1.71.0",
     "swiper": "^11.0.6"
   },
