@@ -1,0 +1,60 @@
+@use 'src/styles/mixins' as m;
+@use 'src/styles/variables' as v;
+
+.container {
+  @include m.flex(10px, flex-start, flex-start, column);
+  width: 100%;
+
+  &.error {
+    .label-container {
+      .label {
+        color: v.$color-red;
+      }
+    }
+
+    input {
+      border-color: v.$color-red;
+    }
+  }
+
+  .label-container {
+    @include m.flex();
+    width: 100%;
+
+    .label {
+      @include m.typography(14px, 25px, 700);
+    }
+
+    span {
+      @include m.typography(14px, 17px, 500, v.$color-red);
+
+      @include m.respond('sm') {
+        font-size: 12px;
+      }
+    }
+  }
+
+  input {
+    @include m.typography(14px, 17px, 500, v.$color-black);
+    width: 100%;
+    height: 50px;
+    border: 1px solid v.$color-dark-grey;
+    border-radius: 30px;
+    background-color: transparent;
+    text-indent: 20px;
+
+    &:-webkit-autofill {
+      transition:
+        background-color 0s 600000s,
+        color 0s 600000s;
+    }
+
+    &::placeholder {
+      @include m.typography(14px, 17px, 500, v.$color-dark-grey);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

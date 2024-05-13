@@ -1,0 +1,76 @@
+@use 'src/styles/mixins' as m;
+@use 'src/styles/variables' as v;
+
+.checkbox-container {
+  @include m.flex(5px, center, flex-start, column);
+  background-color: v.$color-dark-blue;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+  width: 100%;
+  max-height: 180px;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  &.checked {
+    background-color: v.$color-dark-blue;
+  }
+
+  .checkbox-img {
+    @include m.flex(0, center, center);
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    transition: 0.15s linear all;
+    background-color: transparent;
+
+    &.checked {
+      background-color: v.$color-dark-blue;
+      border-color: v.$color-dark-blue;
+
+      svg {
+        color: v.$color-white;
+      }
+    }
+  }
+
+  .checkbox-icon {
+    @include m.flex(0, center, center);
+    width: 24px;
+    height: 24px;
+    border: 1px solid v.$color-grey;
+    border-radius: 5px;
+    transition: 0.15s linear all;
+    background-color: transparent;
+
+    &.checked {
+      background-color: v.$color-dark-blue;
+      border-color: v.$color-dark-blue;
+
+      svg {
+        color: v.$color-white;
+      }
+    }
+
+    &.disabled {
+      display: none;
+    }
+  }
+
+  .label {
+    @include m.typography(12px, 14px, 700, v.$color-white);
+    text-align: center;
+  }
+
+  &.standart {
+    @include m.flex(5px, center, flex-start);
+    background-color: transparent;
+    width: fit-content;
+
+    .label {
+      @include m.typography(12px, 14px, 700, v.$color-dark-blue);
+    }
+  }
+}

@@ -7,7 +7,7 @@ import styles from './index.module.scss';
 
 export const Header = () => (
   <header className={styles.container}>
-    <Link href="/">Заповнити бриф </Link>
+    <Link href="/brief">Заповнити бриф </Link>
     <Link href="/">
       <Image src={logo} alt="logo" />
     </Link>

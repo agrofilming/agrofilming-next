@@ -8,7 +8,7 @@ export const HomeTitle = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <section className={styles.container}>
-      <p>ВІДЕОПРОДАКШН ПОВНОГО ЦИКЛУ. ПРАЦЮЄМО В УКРАЇНІ ТА ЗА КОРДОНОМ</p>
+      <p>ВІДЕОПРОДАКШН ПОВНОГО ЦИКЛУ. ПРАЦЮЄМО В УКРАЇНІ</p>
       <h1>
         СТВОРЮЄМО <br /> ВІДЕО <br /> <span>ДЛЯ АГРОБІЗНЕСУ</span>
       </h1>

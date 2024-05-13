@@ -18,6 +18,9 @@ export const Agritechnica = () => {
       </div>
       <div className={styles['video-button']} onClick={() => setModalOpen(true)}>
         <PlayIcon />
+        <p>
+          Тицьни на мене тут <br /> маленький відосік
+        </p>
       </div>
       <div className={styles['video-bg']}>
         <video

@@ -1,5 +1,5 @@
-@use "src/styles/mixins" as m;
-@use "src/styles/variables" as v;
+@use 'src/styles/mixins' as m;
+@use 'src/styles/variables' as v;
 
 .btn {
   @include m.flex(var(--btn-gap), center, center);
@@ -8,7 +8,9 @@
   height: var(--btn-height);
   text-transform: var(--btn-textTransform);
   border-radius: 10px;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 
   &:focus-visible {
     outline: none;
@@ -28,7 +30,7 @@
   }
 
   &:hover {
-    background-color: v.$color-dark-green;
+    background-color: v.$color-red;
   }
 }
 
@@ -37,7 +39,8 @@
   border: 1px solid v.$color-white;
   background-color: transparent;
 
-  &.active, &:hover {
+  &.active,
+  &:hover {
     background-color: v.$color-white;
     color: v.$color-dark-blue;
 
@@ -51,4 +54,3 @@
     cursor: not-allowed;
   }
 }
-
