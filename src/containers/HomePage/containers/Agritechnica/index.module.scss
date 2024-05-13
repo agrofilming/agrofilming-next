@@ -70,6 +70,13 @@
       animation: pulse 1.5s infinite;
     }
 
+    p {
+      @include m.typography(21px, 21px, 400, v.$color-white);
+      text-align: center;
+      margin-top: 10px;
+      transform: rotateZ(-20deg);
+    }
+
     svg {
       animation: pulseButton 1.5s infinite;
     }

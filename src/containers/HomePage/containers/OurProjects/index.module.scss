@@ -4,8 +4,7 @@
 .container {
   position: relative;
   @include m.flex(50px, center, center, column);
-  //background-image: url("/projects-bg.webp");
-  background: #1c9e0040;
+  background: v.$color-light-grey;
   background-size: contain;
   padding: 80px 0;
   top: -10px;
@@ -14,7 +13,7 @@
   h2 {
     font-size: 153px;
     font-weight: 600;
-    color: v.$color-dark-green;
+    color: v.$color-dark-blue;
   }
 
   .projects {
@@ -28,9 +27,9 @@
     @include m.flex(5px, center, center);
     width: 175px;
     height: 46px;
-    background: v.$color-dark-green;
+    background: v.$color-dark-blue;
     padding: 15px 25px;
-    border-radius: 6px;
+    border-radius: 30px;
     cursor: pointer;
 
     p {
