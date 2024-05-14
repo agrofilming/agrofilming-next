@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'contained' | 'outlined';
+  variant?: 'contained' | 'outlined' | 'green';
   children: ReactNode;
   height?: string;
   width?: string;

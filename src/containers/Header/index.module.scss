@@ -11,13 +11,23 @@
   .nav {
     @include m.flex(0, center, space-between);
 
-    a {
+    > a {
       padding: 10px;
 
       &:hover {
         padding-bottom: 7px;
         color: v.$color-green;
-        border-bottom: 3px solid v.$color-green;
+        border-bottom: 3px solid v.$color-dark-green;
+      }
+    }
+
+    button {
+      margin-left: 5px;
+
+      &:hover {
+        > a {
+          color: v.$color-dark-green;
+        }
       }
     }
   }

@@ -2,9 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import logo from '@/assets/images/footer-logo-leaf.png';
-import logoSolo from '@/assets/images/footer-logo-solo-grey.png';
-import garmari from '@/assets/images/Garmari.png';
-import textil from '@/assets/images/textil.png';
+import logoSolo from '@/assets/images/footer-logo-solo.png';
 import vasko from '@/assets/images/vasko.png';
 
 import styles from './index.module.scss';
@@ -38,16 +36,8 @@ export const Footer = () => {
           <Link href="/blog/post/2">НАВІЩО ПОТРІБЕН ВІДЕОМАРКЕТИНГ</Link>
         </div>
         <div className={styles.partners}>
-          <p>Наші партнери:</p>
+          <p>Генеральний партнер:</p>
           <div className={styles['partners-items']}>
-            <div className={styles.garmari}>
-              <Link href="http://instagram.com/garmari2020" target="_blank">
-                <Image src={garmari} alt="garmari" />
-              </Link>
-              <Link href="https://garmari.web.app" target="_blank">
-                <Image src={textil} alt="garmari" />
-              </Link>
-            </div>
             <div className={styles.vasko}>
               <Link href="https://www.vasko.media/" target="_blank">
                 <Image src={vasko} alt="garmari" />
