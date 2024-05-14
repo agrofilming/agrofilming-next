@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './index.module.scss';
 import Image from 'next/image';
 import lina from '@/assets/images/lina.webp';
@@ -12,8 +14,33 @@ import quantum from '@/assets/images/partners/quantum.webp';
 import spectr from '@/assets/images/partners/spectr-agro.webp';
 import unifer from '@/assets/images/partners/unifer.webp';
 import { PartnerItem } from '@/containers/HomePage/containers/OurPartners/components/PartnerItem';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
-const partnersList = [agroOnline, asu, bizon, droneua, inforce, lg, quantum, spectr, unifer];
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+const partnersList = [
+  agroOnline,
+  asu,
+  bizon,
+  droneua,
+  inforce,
+  lg,
+  quantum,
+  spectr,
+  unifer,
+  agroOnline,
+  asu,
+  bizon,
+  droneua,
+  inforce,
+  lg,
+  quantum,
+  spectr,
+  unifer,
+];
 export const OurPartners = () => (
   <section className={styles.container}>
     <div className={styles['top-block']}>
@@ -23,9 +50,22 @@ export const OurPartners = () => (
       <Image src={lina} alt={'lina'} />
     </div>
     <div className={styles.partners}>
-      {partnersList.map((el, index) => (
-        <PartnerItem key={index} img={el} />
-      ))}
+      <Swiper
+        slidesPerView={8}
+        spaceBetween={20}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        className={styles.swiper}
+      >
+        {partnersList.map((el, index) => (
+          <SwiperSlide key={index}>
+            <PartnerItem img={el} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   </section>
 );

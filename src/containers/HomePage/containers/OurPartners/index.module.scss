@@ -8,7 +8,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 120px;
+  padding: 120px 150px 0;
 
   .top-block {
     @include m.flex(30px, center, space-between);
@@ -31,5 +31,10 @@
   .partners {
     width: 100%;
     @include m.flex(10px, center, center);
+
+    .swiper-container {
+      width: 80%;
+      padding: 0 60px;
+    }
   }
 }

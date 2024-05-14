@@ -30,7 +30,25 @@
   }
 
   &:hover {
-    background-color: v.$color-red;
+    background-color: v.$color-dark-green;
+  }
+}
+
+.green {
+  @include m.typography(var(--btn-fontSize), 17px, var(--btn-fontWeight), v.$color-white);
+  background-color: v.$color-dark-green;
+  border: none;
+  text-transform: uppercase;
+  padding: 0 20px;
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    @include m.typography(var(--btn-fontSize), 17px, var(--btn-fontWeight), v.$color-dark-green);
+    background-color: v.$color-cream;
   }
 }
 

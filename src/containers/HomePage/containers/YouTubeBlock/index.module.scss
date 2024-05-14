@@ -4,7 +4,8 @@
 .container {
   @include m.flex(60px, center, center, column);
   position: relative;
-  background: url('/youtube-bg.webp');
+  background-image: url('/youtube_red.webp');
+
   background-size: cover;
   min-height: 100vh;
   padding: 50px;
