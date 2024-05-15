@@ -4,7 +4,7 @@ import dwwr from '@/assets/images/dont-work-with.webp';
 import creativeTeam from '@/assets/images/creative-team.webp';
 
 export const CreativeTeamBlock = () => (
-  <section className={styles.container}>
+  <section className={styles.container} id={'about-us'}>
     <div className={styles['top-block']}>
       <Image src={dwwr} alt={'not-work-with-ru'} />
       <h2>

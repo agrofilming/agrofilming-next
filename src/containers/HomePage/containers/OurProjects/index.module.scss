@@ -32,6 +32,7 @@
     padding: 15px 25px;
     border-radius: 30px;
     cursor: pointer;
+    margin-top: 50px;
 
     p {
       @include m.typography(16px, 16px, 300, v.$color-white);
@@ -44,9 +45,13 @@
 
   .video-reviews {
     display: none;
-    width: 95%;
+    width: 100%;
 
     h3 {
+      width: 100%;
+      max-width: 33.3%;
+      text-align: center;
+
       span {
         font-size: 136px;
         line-height: 130px;
@@ -63,12 +68,8 @@
     }
 
     .video-list {
-      @include m.flex(50px, flex-start, flex-start, row, wrap);
+      @include m.flex(0, flex-start, flex-start, row, wrap);
       width: 100%;
-
-      iframe {
-        border-radius: 25px;
-      }
     }
 
     &.open {
