@@ -20,7 +20,7 @@ export const Footer = () => {
       <div className={styles.nav}>
         <div className={styles['nav-top-section']}>
           <div className={styles['main-nav']}>
-            <Link href="/">Про нас</Link>
+            <Link href="/#about-us">Про нас</Link>
             <Link href="/blog">Блог</Link>
             <Link href="/#portfolio">Портфоліо</Link>
             <Link href="/">Відео для Ютуб</Link>

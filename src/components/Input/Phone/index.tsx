@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import { FC } from 'react';
-import { Controller } from 'react-hook-form';
 
 import styles from './index.module.scss';
 import { IPhoneInputProps } from './interfaces';
 import { InputMask } from '@react-input/mask';
+import { Controller } from 'react-hook-form';
 
 export const PhoneInput: FC<IPhoneInputProps> = ({ control, errorMessage }) => {
   return (
