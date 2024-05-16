@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 import logo from '@/assets/images/footer-logo-leaf.png';
 import logoSolo from '@/assets/images/footer-logo-solo.png';
-import vasko from '@/assets/images/vasko.png';
 
 import styles from './index.module.scss';
 import { Contacts } from '@/components/Contacts';
+import { Button } from '@/components';
 
 export const Footer = () => {
   const year = new Date().getFullYear();
@@ -22,6 +22,8 @@ export const Footer = () => {
           <div className={styles['main-nav']}>
             <Link href="/#about-us">Про нас</Link>
             <Link href="/blog">Блог</Link>
+          </div>
+          <div className={styles['main-nav']}>
             <Link href="/#portfolio">Портфоліо</Link>
             <Link href="/">Відео для Ютуб</Link>
           </div>
@@ -31,20 +33,14 @@ export const Footer = () => {
         </div>
       </div>
       <div className={styles['right-block']}>
-        <div className={styles.posts}>
-          <Link href="/blog/post/1">ЩО ТАКЕ ВІДЕО ПРОДАКШН</Link>
-          <Link href="/blog/post/2">НАВІЩО ПОТРІБЕН ВІДЕОМАРКЕТИНГ</Link>
-        </div>
-        <div className={styles.partners}>
-          <p>Генеральний партнер:</p>
-          <div className={styles['partners-items']}>
-            <div className={styles.vasko}>
-              <Link href="https://www.vasko.media/" target="_blank">
-                <Image src={vasko} alt="garmari" />
-              </Link>
-            </div>
-          </div>
-        </div>
+        <h3>Завдяки брифу ми швидко підготуємо кошторис проєкту для Вас.</h3>
+        <p>
+          Що таке бриф? Декілька ключових запитань, відповіді на які допоможуть при розрахунку вартості відео.
+          Заповнення займе близько 2 хвилин.
+        </p>
+        <Button variant={'green'}>
+          <Link href="/brief">Заповнити бриф </Link>
+        </Button>
       </div>
     </footer>
   );

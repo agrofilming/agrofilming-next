@@ -3,11 +3,13 @@
 
 .container {
   @include m.container(20px 50px, #131e2c);
-  @include m.flex(0, flex-end, space-between);
+  @include m.flex(0, center, space-between);
   padding-top: 40px;
+  height: 400px;
 
   .copyright {
     position: relative;
+    align-self: flex-end;
 
     .logo {
       max-width: 640px;
@@ -50,37 +52,22 @@
   }
 
   .right-block {
-    @include m.flex(80px, flex-start, space-between, column);
-    align-self: flex-start;
+    @include m.flex(10px, center, center, column);
+    max-width: 500px;
+    text-align: center;
 
-    .posts,
-    .partners {
-      @include m.flex(5px, flex-start, flex-start, column);
-    }
-
-    .partners-items {
-      @include m.flex(20px, flex-start, flex-start);
-
-      .garmari {
-        @include m.flex(5px, flex-start, flex-start, column);
-
-        img {
-          max-width: 120px;
-          height: auto;
-        }
-      }
-
-      .vasko {
-        img {
-          max-width: 40px;
-          height: auto;
-        }
-      }
+    h3 {
+      @include m.typography(20px, 30px, 500, v.$color-cream);
     }
 
     p {
       @include m.typography(15px, 24px, 500, v.$color-cream);
-      padding: 5px;
+    }
+
+    a:hover {
+      @include m.typography(15px, 24px, 500, v.$color-black);
+      border: 1px solid v.$color-cream;
+      border-radius: 10px;
     }
   }
 
