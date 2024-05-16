@@ -14,7 +14,6 @@ export const Header = () => (
 
     <div className={styles.nav}>
       <Link href="/#portfolio">Портфоліо</Link>
-      <Link href="/blog">Блог</Link>
       <Link href="/#contacts">Контакти</Link>
       <Button variant={'green'}>
         <Link href="/brief">Заповнити бриф </Link>

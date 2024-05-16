@@ -32,8 +32,8 @@
   position: relative;
   background: url('/agritechnica-bg.webp');
   background-size: cover;
-  padding: 140px 60px 0;
-  min-height: 70vh;
+  padding: 110px 60px 0;
+  min-height: 675px;
 
   .banners {
     @include m.flex(0, flex-start, space-between);
