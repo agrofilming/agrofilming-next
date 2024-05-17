@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form';
 import { IStepperForm } from '@/containers/BriefPage/interface';
 import styles from './index.module.scss';
 import { BriefForm } from '@/components';
-import { Contacts } from '@/components/Contacts';
+import Link from 'next/link';
+import { MailIcon, PhoneIcon } from '@/assets/icons';
 
 const defaultValues = {
   firstStep: [],
@@ -26,9 +27,28 @@ export const BriefPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles['left-block']}>
-        <h1>Настав час розібрати по зернах ваш проєкт та познайомитись з командою, яка втілить вашу ідею у відео</h1>
+        <h1>Тож, розберемо по зернах Ваш проєкт :)</h1>
+        <h2>
+          Настав час познайомитись з командою,
+          <br /> яка втілить Вашу ідею у відео
+        </h2>
 
-        <Contacts />
+        <div className={styles.contacts}>
+          <Link className={styles['contacts-item']} href="tel:+380688880710">
+            <p>Менеджер по роботі з клієнтами</p>
+            <div>
+              <PhoneIcon />
+              <span>+38 (068) 888-07-10</span>
+            </div>
+          </Link>
+          <Link className={styles['contacts-item']} href="mailto:producer@agrofilming.com">
+            <p>Написати листа</p>
+            <div>
+              <MailIcon />
+              <span>producer@agrofilming.com</span>
+            </div>
+          </Link>
+        </div>
       </div>
 
       <BriefForm />

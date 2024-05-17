@@ -2,37 +2,46 @@
 @use 'mixins' as m;
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'AlegreyaSansSC';
   src:
-    local('Roboto-Regular'),
-    url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+    local('AlegreyaSansSC-Thin'),
+    url('../assets/fonts/AlegreyaSansSC-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlegreyaSansSC';
+  src:
+    local('AlegreyaSansSC-Regular'),
+    url('../assets/fonts/AlegreyaSansSC-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'AlegreyaSansSC';
   src:
-    local('Roboto-Medium'),
-    url('../assets/fonts/Roboto-Medium.ttf') format('truetype');
+    local('AlegreyaSansSC-Medium'),
+    url('../assets/fonts/AlegreyaSansSC-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'AlegreyaSansSC';
   src:
-    local('Roboto-Bold'),
-    url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+    local('AlegreyaSansSC-Bold'),
+    url('../assets/fonts/AlegreyaSansSC-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'AlegreyaSansSC';
   src:
-    local('Roboto-Bold'),
-    url('../assets/fonts/Roboto-Black.ttf') format('truetype');
+    local('AlegreyaSansSC-Bold'),
+    url('../assets/fonts/AlegreyaSansSC-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
@@ -64,7 +73,7 @@ h1 {
 }
 
 a {
-  @include m.typography(18px, 24px, 700, v.$color-white);
+  @include m.typography(18px, 24px, 100, v.$color-white);
   text-decoration: none;
   text-transform: none;
 }

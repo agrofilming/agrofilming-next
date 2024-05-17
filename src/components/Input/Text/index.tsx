@@ -13,7 +13,7 @@ export const TextInput: FC<ITextInputProps> = ({
   setOnFocus = null,
   showLabelBlock = false,
 }) => {
-  const fieldName = useMemo(() => name.split('.').at(-1) as TFieldName, [name]); // handle fieldName for translate, because "name" can be dynamic
+  const fieldName = useMemo(() => ((name.split('.').at(-1) as TFieldName) === 'clientName' ? "Ім'я" : 'Email'), [name]); // handle fieldName for translate, because "name" can be dynamic
 
   return (
     <div className={cn(styles.container, { [styles.error]: errorMessage })}>

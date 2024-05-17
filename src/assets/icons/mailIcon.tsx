@@ -3,8 +3,8 @@ import { SVGProps } from 'react';
 export const MailIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     fill="#ffffff"
-    height="800px"
-    width="800px"
+    height="40px"
+    width="40px"
     version="1.1"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +22,7 @@ export const MailIcon = (props: SVGProps<SVGSVGElement>) => (
 	 M58.0034485,54H5.9965506c-1.6473999,0-3.0638998-1.0021019-3.6760998-2.4278984l20.5199013-20.5200024l5.6547985,3.843401
 	c1.0859013,0.7383003,2.3418007,1.1083984,3.5995998,1.1083984c1.1953011,0,2.3925018-0.3339996,3.4463005-1.0048981
 	l5.8423996-3.7230015l20.2961006,20.2961025C61.0673485,52.9978981,59.6508713,54,58.0034485,54z"
+      fill={'currentColor'}
     />
   </svg>
 );

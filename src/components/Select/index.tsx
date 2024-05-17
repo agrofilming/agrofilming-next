@@ -24,7 +24,10 @@ export const Select: FC<ISelectProps> = ({
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const fieldName = useMemo(() => name.split('.').at(-1) as TFieldName, [name]); // handle fieldName for translate, because can be dynamic
+  const fieldName = useMemo(
+    () => ((name.split('.').at(-1) as TFieldName) === 'budget' ? 'Бюджет' : 'Як ви нас знайшли'),
+    [name],
+  ); // handle fieldName for translate, because can be dynamic
 
   const handleFilterOption = useCallback(
     (inputValue: string, option: { label: string; value: string } | undefined) =>
