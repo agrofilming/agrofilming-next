@@ -1,11 +1,11 @@
 @use 'variables' as v;
 
 $breakpoints: (
-        'sm': 550px,
-        'md': 768px,
-        'lg': 1024px,
-        'xl': 1440px,
-        'xxl': 2560px,
+  'sm': 550px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1440px,
+  'xxl': 2560px,
 ) !default;
 
 @mixin respond($breakpoint) {
@@ -29,7 +29,7 @@ $breakpoints: (
 }
 
 @mixin typography($size: 14px, $height: 17px, $weight: 500, $color: v.$color-black) {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'AlegreyaSansSC', sans-serif;
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
@@ -40,4 +40,3 @@ $breakpoints: (
   padding: $padding;
   background-color: $color;
 }
-

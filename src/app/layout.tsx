@@ -6,7 +6,7 @@ import { TagCarousel } from '@/components/TagCarousel';
 import { Footer } from '@/containers/Footer';
 import { Header } from '@/containers/Header';
 
-import { roboto } from './fonts';
+import { alegreyaSansSC } from './fonts';
 import { LeadSeeker } from '@/components/LeadSeaker';
 import { MailIcon } from '@/assets/icons/mailIcon';
 import { PhoneIcon } from '@/assets/icons/phoneIcon';
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en" className={alegreyaSansSC.className}>
       <body>
         <Header />
         <main>{children}</main>

@@ -20,11 +20,13 @@ export const BriefForm = () => {
   return (
     <div className={styles.container}>
       <form>
-        <h2>1. Про проєкт</h2>
+        <h2>1. ПРО ПРОЄКТ</h2>
 
         {questionData.map(({ question, checkboxVariants }, index) => (
           <div key={index} className={styles.question}>
-            <h3>{question}</h3>
+            <h3>
+              <i>{question}</i>
+            </h3>
 
             <div className={styles.checkboxes}>
               {checkboxVariants.map(({ value, id }) => (
@@ -33,7 +35,7 @@ export const BriefForm = () => {
             </div>
           </div>
         ))}
-        <h2>2. Про проєкт</h2>
+        <h2>2. ПРО ВАС</h2>
 
         <TextInput name={'clientName'} register={register} />
 

@@ -8,9 +8,28 @@
 
   .left-block {
     @include m.flex(30px, flex-start, center, column);
+    padding-top: 30px;
 
-    a {
-      color: v.$color-cream;
+    .contacts {
+      @include m.flex(30px, flex-start, center, column);
+
+      a {
+        @include m.flex(10px, flex-start, center, column);
+        @include m.typography(16px, 20px, 400, v.$color-black);
+        color: v.$color-black;
+        cursor: pointer;
+
+        div {
+          @include m.flex(10px, center, flex-start);
+          padding-left: 20px;
+        }
+
+        &:hover {
+          div {
+            @include m.typography(16px, 20px, 400, v.$color-dark-green);
+          }
+        }
+      }
     }
 
     h1 {

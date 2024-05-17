@@ -10,7 +10,7 @@ export const defaultValues = {
 
 export const questionData = [
   {
-    question: 'Для чого вам потрібно відео?',
+    question: 'Для чого Вам потрібно відео?',
     checkboxVariants: [
       {
         id: 1,
@@ -40,7 +40,7 @@ export const questionData = [
     ],
   },
   {
-    question: 'Яка головна мета вашого відео?',
+    question: 'Яка головна мета Вашого відео?',
     checkboxVariants: [
       {
         id: 1,
@@ -100,7 +100,7 @@ export const questionData = [
     ],
   },
   {
-    question: 'Коли ви бажаєте отримати готовий відеоролик?',
+    question: 'Коли Ви бажаєте отримати готовий відеоролик?',
     checkboxVariants: [
       {
         id: 1,
@@ -130,11 +130,11 @@ export const questionData = [
     ],
   },
   {
-    question: 'Вам потрібен сценарій для вашого відео?',
+    question: 'Потрібен сценарій для Вашого відео?',
     checkboxVariants: [
       {
         id: 1,
-        value: 'Так моні потрібна допомога',
+        value: 'Так, мені потрібна допомога',
         isChecked: false,
       },
       {

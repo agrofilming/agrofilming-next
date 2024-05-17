@@ -5,7 +5,7 @@ export interface IOption {
   value: string;
 }
 
-export type TFieldName = 'budget';
+export type TFieldName = 'budget' | 'fromWhere';
 
 export interface ISelectProps {
   name: string;
