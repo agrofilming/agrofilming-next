@@ -35,6 +35,10 @@
     h1 {
       @include m.typography(57px, 60px, 900, v.$color-black);
       max-width: 600px;
+
+      span {
+        color: v.$color-dark-green;
+      }
     }
   }
 

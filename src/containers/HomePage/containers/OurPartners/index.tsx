@@ -20,6 +20,8 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useMedia } from '@/hooks/useMedia';
+import { useMemo } from 'react';
 
 const partnersList = [
   agroOnline,
@@ -41,31 +43,52 @@ const partnersList = [
   spectr,
   unifer,
 ];
-export const OurPartners = () => (
-  <section className={styles.container}>
-    <div className={styles['top-block']}>
-      <div className={styles.title}>
-        <h2>НАШИ КЛІЄНТИ</h2>
+export const OurPartners = () => {
+  const isMobile = useMedia('(max-width: 767px)');
+  const isTablet = useMedia('(max-width: 1023px)');
+  const isDesktop = useMedia('(max-width: 1279px)');
+  const isLaptop = useMedia('(max-width: 1439px)');
+
+  const slidesPerView = useMemo(() => {
+    switch (true) {
+      case isMobile:
+        return 2;
+      case isTablet:
+        return 4;
+      case isDesktop:
+        return 5;
+      case isLaptop:
+        return 6;
+      default:
+        return 7;
+    }
+  }, [isMobile, isTablet, isDesktop, isLaptop]);
+  return (
+    <section className={styles.container}>
+      <div className={styles['top-block']}>
+        <div className={styles.title}>
+          <h2>НАШИ БУСІНКИ</h2>
+        </div>
+        <Image src={lina} alt={'lina'} />
       </div>
-      <Image src={lina} alt={'lina'} />
-    </div>
-    <div className={styles.partners}>
-      <Swiper
-        slidesPerView={8}
-        spaceBetween={20}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
-        className={styles.swiper}
-      >
-        {partnersList.map((el, index) => (
-          <SwiperSlide key={index}>
-            <PartnerItem img={el} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-  </section>
-);
+      <div className={styles.partners}>
+        <Swiper
+          slidesPerView={slidesPerView}
+          spaceBetween={20}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+          className={styles.swiper}
+        >
+          {partnersList.map((el, index) => (
+            <SwiperSlide key={index}>
+              <PartnerItem img={el} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+};

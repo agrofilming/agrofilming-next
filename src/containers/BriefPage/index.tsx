@@ -27,7 +27,9 @@ export const BriefPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles['left-block']}>
-        <h1>Тож, розберемо по зернах Ваш проєкт :)</h1>
+        <h1>
+          Тож, <span>розберемо по зернах</span> Ваш проєкт :)
+        </h1>
         <h2>
           Настав час познайомитись з командою,
           <br /> яка втілить Вашу ідею у відео

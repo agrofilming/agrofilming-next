@@ -3,36 +3,52 @@
 
 .container {
   @include m.container(20px 50px, #131e2c);
-  @include m.flex(0, center, space-between);
+  @include m.flex(10px, center, flex-end);
   padding-top: 40px;
   height: 400px;
+  position: relative;
+  z-index: 1;
+
+  @include m.respond('md') {
+    width: 100vw;
+    height: 500px;
+    @include m.flex(10px, center, flex-start, column);
+  }
 
   .copyright {
-    position: relative;
+    position: absolute;
     align-self: flex-end;
+    left: 50px;
+    bottom: 15px;
+    z-index: -1;
 
     .logo {
-      max-width: 640px;
+      max-width: 550px;
       height: auto;
       position: absolute;
       left: -50px;
-      bottom: -20px;
+      bottom: -15px;
       z-index: 0;
       opacity: 0.1;
     }
 
     .logoSolo {
-      max-width: 640px;
+      max-width: 550px;
       height: auto;
-      position: absolute;
+      position: relative;
       left: -50px;
       bottom: -20px;
       z-index: 0;
+      @include m.respond('xl') {
+        opacity: 0.1;
+      }
     }
 
     span {
-      padding-left: 200px;
       @include m.typography(14px, 17px, 400, v.$color-white);
+      position: absolute;
+      right: 200px;
+      bottom: -10px;
     }
   }
 
@@ -40,6 +56,10 @@
     @include m.flex(10px, flex-start, space-between, column);
     position: relative;
     z-index: 2;
+
+    @include m.respond('md') {
+      @include m.flex(10px, center, flex-start, column);
+    }
 
     .nav-top-section {
       @include m.flex(10px, flex-start, space-between);
@@ -53,15 +73,17 @@
 
   .right-block {
     @include m.flex(10px, center, center, column);
-    max-width: 500px;
     text-align: center;
+    max-width: 500px;
+    width: 100%;
 
     h3 {
-      @include m.typography(20px, 30px, 500, v.$color-cream);
+      @include m.typography(20px, 30px, 400, v.$color-cream);
+      text-transform: uppercase;
     }
 
     p {
-      @include m.typography(15px, 24px, 500, v.$color-cream);
+      @include m.typography(15px, 15px, 100, v.$color-cream);
     }
 
     a:hover {

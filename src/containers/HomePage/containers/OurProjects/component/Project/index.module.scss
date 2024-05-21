@@ -2,9 +2,17 @@
 @use '@/styles/mixins' as m;
 
 .container {
-  width: 25vw;
+  width: 33.3vw;
   height: auto;
   position: relative;
+
+  @include m.respond('md') {
+    width: 50vw;
+  }
+
+  @include m.respond('sm') {
+    width: 100vw;
+  }
 
   img {
     width: 100%;

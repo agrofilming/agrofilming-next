@@ -7,6 +7,7 @@
   width: 100%;
   position: fixed;
   z-index: 99;
+  padding-top: 10px;
 
   .nav {
     @include m.flex(0, center, space-between);
@@ -26,9 +27,22 @@
 
       &:hover {
         > a {
-          color: v.$color-dark-green;
+          color: v.$color-black;
         }
       }
+    }
+
+    @include m.respond('sm') {
+      display: none;
+    }
+  }
+
+  .nav-mobile,
+  .mob-icon {
+    display: none;
+
+    @include m.respond('sm') {
+      display: block;
     }
   }
 
@@ -36,4 +50,11 @@
     max-width: 120px;
     height: auto;
   }
+}
+
+.nav-mobile {
+  @include m.flex(20px, center, center, column);
+  width: 100vw;
+  height: 100vh;
+  background-color: v.$color-dark-blue;
 }

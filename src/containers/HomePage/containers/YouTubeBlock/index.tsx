@@ -5,7 +5,7 @@ import desktop from '@/assets/images/desktop-youtube.webp';
 import Image from 'next/image';
 
 export const YouTubeBlock = () => (
-  <section className={styles.container}>
+  <section className={styles.container} id={'youtube'}>
     <h2>
       Працювали над усіма випусками YouTube каналу <br />
       <span>&quot;Агробізнес Без Цензури&quot;</span>

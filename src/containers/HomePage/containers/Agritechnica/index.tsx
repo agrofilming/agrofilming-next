@@ -13,8 +13,8 @@ export const Agritechnica = () => {
   return (
     <section className={styles.container}>
       <div className={styles.banners}>
-        <Image src={blueBanner} alt={'blue-banner'} />
-        <Image src={yellowBanner} alt={'yellow-banner'} />
+        <Image src={blueBanner} alt={'blue-banner'} className={styles['blue-banner']} />
+        <Image src={yellowBanner} alt={'yellow-banner'} className={styles['yellow-banner']} />
       </div>
       <div className={styles['video-button']} onClick={() => setModalOpen(true)}>
         <PlayIcon />
