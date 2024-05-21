@@ -8,7 +8,9 @@ export const CreativeTeamBlock = () => (
   <section className={styles.container} id={'about-us'}>
     <div className={styles['top-block']}>
       <Image src={dwwr} alt={'not-work-with-ru'} />
-      <Link href={'/brief'}>Заповнити бриф</Link>
+      <Link href={'/brief'}>
+        ХОЧУ <br /> ВІДЕО
+      </Link>
       <h2>
         *З НАМИ ЗАВЖДИ <br />
         КАЙФОВО ПРАЦЮВАТИ

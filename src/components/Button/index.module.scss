@@ -36,7 +36,7 @@
 
 .green {
   @include m.typography(var(--btn-fontSize), 17px, var(--btn-fontWeight), v.$color-white);
-  background-color: v.$color-dark-green;
+  background-color: v.$color-green;
   border: none;
   text-transform: uppercase;
   padding: 0 20px;

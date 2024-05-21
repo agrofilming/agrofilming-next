@@ -35,6 +35,22 @@
     position: absolute;
     top: 130px;
     left: 50px;
+
+    @include m.respond('lg') {
+      top: 100px;
+    }
+
+    @include m.respond('md') {
+      @include m.typography(16px, 20px, 300, v.$color-white);
+      max-width: 360px;
+      top: 80px;
+    }
+
+    @include m.respond('sm') {
+      @include m.typography(12px, 16px, 300, v.$color-white);
+      max-width: 300px;
+      top: 80px;
+    }
   }
 
   h1 {
@@ -49,6 +65,31 @@
       -webkit-text-stroke-color: v.$color-white;
       stroke-width: 2px;
     }
+
+    @include m.respond('lg') {
+      @include m.typography(80px, 100px, 900, v.$color-white);
+      top: 120px;
+
+      span {
+        @include m.typography(80px, 100px, 900, #ffffff00);
+      }
+    }
+
+    @include m.respond('md') {
+      @include m.typography(50px, 70px, 900, v.$color-white);
+      span {
+        @include m.typography(50px, 70px, 900, #ffffff00);
+      }
+    }
+
+    @include m.respond('sm') {
+      @include m.typography(30px, 30px, 900, v.$color-white);
+      top: 110px;
+
+      span {
+        @include m.typography(30px, 30px, 900, #ffffff00);
+      }
+    }
   }
 
   .video-button {
@@ -57,6 +98,20 @@
     cursor: pointer;
     top: 55%;
     left: 65%;
+
+    @include m.respond('lg') {
+      top: 23%;
+    }
+
+    @include m.respond('md') {
+      top: 17%;
+    }
+
+    @include m.respond('sm') {
+      width: 50px;
+      height: 50px;
+      top: 11%;
+    }
 
     &:before {
       content: '';
@@ -70,10 +125,20 @@
       cursor: pointer;
       box-shadow: 0 0 0 0 rgba(v.$color-white, 0.9);
       animation: pulse 1.5s infinite;
+
+      @include m.respond('md') {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     svg {
       animation: pulseButton 1.5s infinite;
+
+      @include m.respond('sm') {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &:hover {
