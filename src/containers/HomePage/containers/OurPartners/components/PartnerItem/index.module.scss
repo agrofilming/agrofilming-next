@@ -8,8 +8,17 @@
   background: v.$color-white;
   border-radius: 15px;
 
+  @include m.respond('sm') {
+    width: 100px;
+    height: 100px;
+  }
+
   img {
     max-width: 150px;
     height: auto;
+
+    @include m.respond('sm') {
+      width: 100%;
+    }
   }
 }
