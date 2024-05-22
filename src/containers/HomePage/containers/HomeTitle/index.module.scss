@@ -29,6 +29,7 @@
 
 .container {
   width: 100vw;
+  position: relative;
 
   p {
     @include m.typography(17px, 21px, 300, v.$color-white);
@@ -158,6 +159,7 @@
   .video-bg {
     position: relative;
     width: 100%;
+    scale: 1.09;
     z-index: -1;
   }
 }

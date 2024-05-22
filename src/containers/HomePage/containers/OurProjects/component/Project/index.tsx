@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import { FC, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import { ModalComponent } from '@/components/Modal';
+import { Modal } from '@/components/ModalNew';
 
 interface IProject {
   video: string;
@@ -17,9 +17,9 @@ export const Project: FC<IProject> = ({ video, img, title }) => {
       <div className={styles.hover}>
         <h4>{title}</h4>
       </div>
-      <ModalComponent isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+      <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>
         <video src={video} autoPlay={modalOpen} controlsList={'nodownload'}></video>
-      </ModalComponent>
+      </Modal>
     </div>
   );
 };
