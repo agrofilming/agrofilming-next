@@ -11,10 +11,14 @@
   }
 
   h1 {
-    @include m.typography(107px, 120px, 900);
+    @include m.typography(90px, 100px, 500);
   }
 
   .posts {
-    @include m.flex(50px, center, flex-start,);
+    @include m.flex(50px, center, flex-start);
+    @include m.respond('md') {
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
   }
 }

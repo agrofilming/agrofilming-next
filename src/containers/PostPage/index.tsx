@@ -4,6 +4,7 @@ import { blogData } from '@/containers/BlogPage/const';
 import { PostItem } from '@/containers/BlogPage/components';
 import { Button } from '@/components';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface IPostPageProps {
   id: string;
@@ -22,9 +23,7 @@ export const PostPage: FC<IPostPageProps> = ({ id }) => {
 
       <h1>{data?.title}</h1>
 
-      <div className={styles['main-desc']}>
-        <p>{data?.mainDesc}</p>
-      </div>
+      <div className={styles['main-desc']}>{data?.mainDesc}</div>
 
       {data?.content.map(({ text, img }, index) => (
         <div key={index} className={styles.content}>
@@ -37,8 +36,8 @@ export const PostPage: FC<IPostPageProps> = ({ id }) => {
 
       <div className={styles.attention}>
         <p>
-          Ми команда AgroFilmProduction завжди робимо правильні та влучні відоси для <br /> Агробізнесу, відео які
-          підвищують ваші продажі.
+          Ми команда AgroFilmProduction <br /> завжди робимо правильні та влучні відоси для <br /> Агробізнесу, відео
+          які підвищують ваші продажі.
         </p>
       </div>
 
@@ -53,8 +52,9 @@ export const PostPage: FC<IPostPageProps> = ({ id }) => {
           фермерського господарства.
         </li>
       </ul>
-
-      <Button>Замовити відео</Button>
+      <Link href={'/brief'}>
+        <Button>Замовити відео</Button>
+      </Link>
 
       <div className={styles.line}></div>
 

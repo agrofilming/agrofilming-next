@@ -8,11 +8,12 @@
   height: 400px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 
   @include m.respond('md') {
+    @include m.flex(10px, center, flex-start, column);
     width: 100vw;
     height: 500px;
-    @include m.flex(10px, center, flex-start, column);
   }
 
   .copyright {

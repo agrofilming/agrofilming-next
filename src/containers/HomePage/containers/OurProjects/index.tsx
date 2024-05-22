@@ -1,6 +1,4 @@
 'use client';
-import { Rubik_Microbe } from 'next/font/google';
-
 import unifer from '@/assets/images/projects/Unifer.webp';
 import advertising from '@/assets/images/projects/advertising.webp';
 import discovery from '@/assets/images/projects/discovery.webp';
@@ -18,12 +16,6 @@ import { Project } from '@/containers/HomePage/containers/OurProjects/component/
 import { ArrowIcon } from '@/assets/icons/arrowIcon';
 import cn from 'classnames';
 import { useMemo, useState } from 'react';
-
-const rubik = Rubik_Microbe({
-  weight: '400',
-  style: 'normal',
-  subsets: ['latin'],
-});
 
 const projects = [
   {
@@ -128,7 +120,7 @@ export const OurProjects = () => {
       </div>
       <div className={cn(styles['video-reviews'], { [styles.open]: isOpen })}>
         <div className={styles['video-list']}>
-          <h3 className={rubik.className}>
+          <h3>
             <span>СЕРІЯ</span> <br />
             відеооглядів <br /> <span className={styles.small}>сільгосптехніки</span>
           </h3>
