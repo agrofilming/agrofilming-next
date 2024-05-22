@@ -2,7 +2,7 @@
 import styles from './index.module.scss';
 import { PlayIcon } from '@/assets/icons/playIcon';
 import { useState } from 'react';
-import { ModalComponent } from '@/components/Modal';
+import { Modal } from '@/components/ModalNew';
 
 export const HomeTitle = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -23,13 +23,13 @@ export const HomeTitle = () => {
         loop
         src="https://www.agrofilming.com/wp-content/uploads/2024/02/he8uqg.mp4#t=-4"
       />
-      <ModalComponent isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+      <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>
         <video
           src={'https://www.agrofilming.com/wp-content/uploads/2023/09/SHOWREEL_AgroFilmProduction_v4.mp4'}
           autoPlay={modalOpen}
           controlsList={'nodownload'}
         ></video>
-      </ModalComponent>
+      </Modal>
     </section>
   );
 };
