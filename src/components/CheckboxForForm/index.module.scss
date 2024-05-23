@@ -60,7 +60,7 @@
   }
 
   .label {
-    @include m.typography(14px, 16px, 700, v.$color-white);
+    @include m.typography(14px, 16px, 400, v.$color-white);
     text-align: center;
   }
 
@@ -70,7 +70,7 @@
     width: fit-content;
 
     .label {
-      @include m.typography(14px, 16px, 700, v.$color-dark-blue);
+      @include m.typography(14px, 16px, 400, v.$color-dark-blue);
     }
   }
 }

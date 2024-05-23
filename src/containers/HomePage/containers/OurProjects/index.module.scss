@@ -6,7 +6,7 @@
   @include m.flex(0, center, center, column);
   background: v.$color-light-grey;
   background-size: contain;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
   top: -10px;
   margin-bottom: -10px;
 
@@ -44,7 +44,7 @@
     padding: 15px 25px;
     border-radius: 30px;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 15px;
 
     p {
       @include m.typography(16px, 16px, 300, v.$color-white);
