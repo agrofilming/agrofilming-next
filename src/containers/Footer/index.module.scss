@@ -3,17 +3,29 @@
 
 .container {
   @include m.container(20px 50px, #131e2c);
-  @include m.flex(10px, center, flex-end);
+  @include m.flex(50px, center, flex-end);
   padding-top: 40px;
   height: 400px;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  background: v.$color-gradient-footer;
 
   @include m.respond('md') {
     @include m.flex(10px, center, flex-start, column);
     width: 100vw;
     height: 500px;
+  }
+
+  a {
+    @include m.typography(15px, 24px, 500, v.$color-cream);
+    padding: 5px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid v.$color-cream;
+      border-radius: 10px;
+    }
   }
 
   .copyright {
@@ -73,7 +85,7 @@
   }
 
   .right-block {
-    @include m.flex(10px, center, center, column);
+    @include m.flex(20px, center, center, column);
     text-align: center;
     max-width: 500px;
     width: 100%;
@@ -89,18 +101,7 @@
 
     a:hover {
       @include m.typography(15px, 24px, 500, v.$color-black);
-      border: 1px solid v.$color-cream;
-      border-radius: 10px;
-    }
-  }
-
-  a {
-    @include m.typography(15px, 24px, 500, v.$color-cream);
-    padding: 5px;
-    border: 1px solid transparent;
-
-    &:hover {
-      border: 1px solid v.$color-cream;
+      border: none;
       border-radius: 10px;
     }
   }

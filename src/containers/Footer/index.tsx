@@ -34,9 +34,9 @@ export const Footer = () => {
       </div>
       <div className={styles['right-block']}>
         <h3>Завдяки брифу ми швидко підготуємо кошторис.</h3>
-        <Button variant={'green'}>
-          <Link href="/brief">Заповнити бриф </Link>
-        </Button>
+        <Link href="/brief">
+          <Button variant={'green'}>Заповнити бриф</Button>
+        </Link>
         <p>
           Ключові запитання, які допоможуть при розрахунку вартості відео. <br />
           Заповнення займе близько 2 хвилин.
