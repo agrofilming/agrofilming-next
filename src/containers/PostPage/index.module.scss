@@ -45,6 +45,12 @@
     @include m.flex(30px, flex-start, flex-start, column);
     width: 80%;
 
+    span {
+      @include m.typography(14px, 14px, 100);
+      position: relative;
+      top: -50px;
+    }
+
     img {
       max-width: 800px;
       width: 100%;
@@ -64,6 +70,8 @@
   .attention {
     width: 80%;
     background-color: v.$color-light-grey;
+    background-image: url('/agritechnica-bg.webp');
+    background-size: cover;
     border-radius: 12px;
     padding: 40px;
 
@@ -85,7 +93,8 @@
   }
 
   .posts {
-    @include m.flex(50px, center, flex-start);
+    @include m.flex(50px, center, center);
+    flex-wrap: wrap;
   }
 
   ul {

@@ -246,6 +246,8 @@ video {
 
   .ant-modal-content {
     padding: 0;
+    background-color: transparent;
+    border-radius: 0;
 
     .close-icon {
       position: absolute;
@@ -255,6 +257,7 @@ video {
       color: v.$color-white;
       width: 40px;
       height: 40px;
+      z-index: 2;
     }
   }
 }

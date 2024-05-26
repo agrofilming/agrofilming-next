@@ -102,7 +102,7 @@
     }
 
     .video-list {
-      @include m.flex(0, flex-start, flex-start, row, wrap);
+      @include m.flex(0, center, flex-start, row, wrap);
       width: 100%;
 
       iframe {

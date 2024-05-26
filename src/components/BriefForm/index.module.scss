@@ -3,7 +3,9 @@
 
 .container {
   @include m.flex(50px, center, flex-start, column);
-  background: v.$color-light-grey;
+  background-color: v.$color-light-grey;
+  background-image: url('/agritechnica-bg.webp');
+  background-size: cover;
   border-radius: 50px;
   padding: 20px;
 
