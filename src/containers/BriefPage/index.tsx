@@ -6,16 +6,7 @@ import styles from './index.module.scss';
 import { BriefForm } from '@/components';
 import Link from 'next/link';
 import { MailIcon, PhoneIcon } from '@/assets/icons';
-
-const defaultValues = {
-  firstStep: [],
-  secondStep: [],
-  thirdStep: [],
-  fourthStep: [],
-  fifthStep: [],
-  sixthStep: [],
-  seventhStep: [],
-};
+import { defaultValues } from '@/components/BriefForm/const';
 
 export const BriefPage = () => {
   const {

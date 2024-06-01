@@ -1,11 +1,7 @@
 export const defaultValues = {
-  firstStep: [],
-  secondStep: [],
-  thirdStep: [],
-  fourthStep: [],
-  fifthStep: [],
-  sixthStep: [],
-  seventhStep: [],
+  clientName: '',
+  email: '',
+  phone: '+380',
 };
 
 export const questionData = [
@@ -184,5 +180,24 @@ export const budgetOptions = [
   {
     label: 'Гроші є, головне досягти бажаної мети',
     value: 'Гроші є, головне досягти бажаної мети',
+  },
+];
+
+export const findOptions = [
+  {
+    label: 'Рекомендація партнерів',
+    value: 'Рекомендація партнерів',
+  },
+  {
+    label: 'Instagram',
+    value: 'Instagram',
+  },
+  {
+    label: 'Пошук в Google',
+    value: 'Пошук в Google',
+  },
+  {
+    label: 'Інше',
+    value: 'Інше',
   },
 ];

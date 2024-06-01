@@ -33,7 +33,7 @@
   background: url('/agritechnica-bg.webp');
   background-size: cover;
   padding: 110px 60px 0;
-  min-height: 675px;
+  min-height: 275px;
 
   .banners {
     @include m.flex(0, flex-start, space-between);
@@ -73,7 +73,7 @@
     }
 
     img {
-      max-width: 600px;
+      max-width: 500px;
       height: auto;
 
       &:first-child {
@@ -86,6 +86,7 @@
     position: relative;
     z-index: 3;
     cursor: pointer;
+    top: -140px;
 
     @include m.respond('sm') {
       top: 40px;
@@ -142,10 +143,10 @@
     @include m.flex(0, center, center);
     position: absolute;
     width: 100%;
-    height: 450px;
+    height: 200px;
     overflow: hidden;
     z-index: 1;
-    bottom: 0;
+    top: 220px;
 
     video {
       width: 100%;

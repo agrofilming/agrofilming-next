@@ -111,6 +111,10 @@
     video {
       width: 300px;
       border-radius: 50px;
+
+      @include m.respond('sm') {
+        display: none;
+      }
     }
   }
 }
