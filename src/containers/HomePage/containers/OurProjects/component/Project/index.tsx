@@ -17,8 +17,8 @@ export const Project: FC<IProject> = ({ video, img, title }) => {
       <div className={styles.hover}>
         <h4>{title}</h4>
       </div>
-      <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>
-        <video src={video} autoPlay={modalOpen} controlsList={'nodownload'}></video>
+      <Modal open={modalOpen} onCancel={() => setModalOpen(false)} showClose>
+        <video src={video} autoPlay={modalOpen} controlsList={'nodownload'} controls={true}></video>
       </Modal>
     </div>
   );

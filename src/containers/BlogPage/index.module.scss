@@ -15,9 +15,10 @@
   }
 
   .posts {
-    @include m.flex(50px, center, flex-start);
+    @include m.flex(50px, center, center);
+    flex-wrap: wrap;
+
     @include m.respond('md') {
-      flex-wrap: wrap;
       padding: 0 20px;
     }
   }

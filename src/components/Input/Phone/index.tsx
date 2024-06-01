@@ -1,9 +1,11 @@
+'use client';
+
 import cn from 'classnames';
 import { FC } from 'react';
 
 import styles from './index.module.scss';
 import { IPhoneInputProps } from './interfaces';
-import { InputMask } from '@react-input/mask';
+import InputMask from 'react-input-mask';
 import { Controller } from 'react-hook-form';
 
 export const PhoneInput: FC<IPhoneInputProps> = ({ control, errorMessage }) => {
@@ -16,13 +18,13 @@ export const PhoneInput: FC<IPhoneInputProps> = ({ control, errorMessage }) => {
           required: { value: true, message: `Обов'язкове поле` },
           validate: { validPhone: value => /^\+\d{11,12}$/gm.test(value) || 'Невірний формат' },
         }}
-        render={({ field }) => (
+        render={({ field: { ref, onChange, ...rest } }) => (
           <InputMask
-            mask="+380 (99) 99-99-999"
+            mask=""
             placeholder="+380 XX XXX XXXX"
-            type="tel"
-            value={field.value}
-            onChange={event => field.onChange(event.target.value.replace(/\s/g, ''))}
+            inputRef={ref}
+            onChange={event => onChange(event.target.value.replace(/\s/g, ''))}
+            {...rest}
           />
         )}
       />

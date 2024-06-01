@@ -31,8 +31,9 @@ export const PostPage: FC<IPostPageProps> = ({ id }) => {
           <Image src={img} alt={`post-content-img-${index}`} />
         </div>
       ))}
-
-      <p className={styles.brief}>{data?.brief}</p>
+      <div className={styles.content}>
+        <p className={styles.brief}>{data?.brief}</p>
+      </div>
 
       <div className={styles.attention}>
         <p>

@@ -9,6 +9,11 @@
   z-index: 99;
   padding-top: 10px;
 
+  @include m.respond('sm') {
+    position: relative;
+    background-color: v.$color-black;
+  }
+
   .nav {
     @include m.flex(0, center, space-between);
 
@@ -53,8 +58,9 @@
 }
 
 .nav-mobile {
-  @include m.flex(20px, center, center, column);
+  @include m.flex(20px, flex-start, flex-start, column);
   width: 100vw;
   height: 100vh;
   background-color: v.$color-dark-blue;
+  padding: 30px;
 }

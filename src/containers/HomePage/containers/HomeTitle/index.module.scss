@@ -50,7 +50,7 @@
     @include m.respond('sm') {
       @include m.typography(12px, 16px, 300, v.$color-white);
       max-width: 300px;
-      top: 80px;
+      top: 30px;
     }
   }
 
@@ -85,7 +85,7 @@
 
     @include m.respond('sm') {
       @include m.typography(30px, 30px, 900, v.$color-white);
-      top: 110px;
+      top: 60px;
 
       span {
         @include m.typography(30px, 30px, 900, #ffffff00);
@@ -109,9 +109,7 @@
     }
 
     @include m.respond('sm') {
-      width: 50px;
-      height: 50px;
-      top: 11%;
+      display: none;
     }
 
     &:before {
@@ -159,7 +157,7 @@
   .video-bg {
     position: relative;
     width: 100%;
-    scale: 1.09;
+    scale: 1.075;
     z-index: -1;
   }
 }
