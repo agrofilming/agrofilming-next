@@ -3,11 +3,12 @@
 
 .container {
   @include m.flex(50px, center, flex-start, column);
-  padding-bottom: 100px;
 
-  img {
+  > img {
+    position: relative;
     width: 100%;
     height: auto;
+    top: -90px;
   }
 
   h1 {

@@ -5,7 +5,7 @@
   @include m.container(20px 50px, #131e2c);
   @include m.flex(50px, center, flex-end);
   padding-top: 40px;
-  height: 400px;
+  height: 350px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -58,15 +58,15 @@
     }
 
     span {
-      @include m.typography(14px, 17px, 400, v.$color-white);
+      @include m.typography(10px, 10px, 100, v.$color-white);
       position: absolute;
       right: 200px;
-      bottom: -10px;
+      bottom: -3px;
     }
   }
 
   .nav {
-    @include m.flex(10px, flex-start, space-between, column);
+    @include m.flex(50px, flex-start, space-between, column);
     position: relative;
     z-index: 2;
 
