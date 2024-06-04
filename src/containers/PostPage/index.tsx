@@ -53,7 +53,7 @@ export const PostPage: FC<IPostPageProps> = ({ id }) => {
           фермерського господарства.
         </li>
       </ul>
-      <Link href={'/brief'}>
+      <Link href={'/brief'} target={'_blank'}>
         <Button>Замовити відео</Button>
       </Link>
 

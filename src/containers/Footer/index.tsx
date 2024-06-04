@@ -33,14 +33,10 @@ export const Footer = () => {
         </div>
       </div>
       <div className={styles['right-block']}>
-        <h3>Завдяки брифу ми швидко підготуємо кошторис.</h3>
         <Link href="/brief">
-          <Button variant={'green'}>Заповнити бриф</Button>
+          <Button variant={'green'}>ХОЧУ ВІДЕО</Button>
         </Link>
-        <p>
-          Ключові запитання, які допоможуть при розрахунку вартості відео. <br />
-          Заповнення займе близько 2 хвилин.
-        </p>
+        <p>Дай відповідь на 7 питань і дізнайся вартість відео</p>
       </div>
     </footer>
   );

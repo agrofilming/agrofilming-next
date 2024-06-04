@@ -2,11 +2,11 @@
 @use 'src/styles/mixins' as m;
 
 .container {
-  @include m.flex(20px, center, flex-start, column);
+  @include m.flex(10px, center, flex-start, column);
   width: 100%;
-  max-width: 45vw;
+  max-width: 30vw;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   background: v.$color-light-grey;
 
   img {
@@ -16,11 +16,11 @@
   }
 
   h3 {
-    @include m.typography(27px, 27px, 700, v.$color-dark-blue);
+    @include m.typography(22px, 27px, 700, v.$color-dark-blue);
   }
 
   p {
-    @include m.typography(17px, 21px, 400, v.$color-dark-blue);
+    @include m.typography(15px, 21px, 400, v.$color-dark-blue);
     max-width: 500px;
     text-align: center;
     margin-bottom: 40px;

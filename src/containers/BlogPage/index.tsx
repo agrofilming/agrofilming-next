@@ -9,7 +9,6 @@ export const BlogPage = () => {
   return (
     <div className={styles.container}>
       <Image src={blogTitleImg} alt={'blog title'} />
-      <h1>Статті</h1>
       <div className={styles.posts}>
         {blogData.map(({ id, title, desc, img }) => (
           <PostItem key={id} title={title} id={id} description={desc} image={img} />

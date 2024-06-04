@@ -86,7 +86,7 @@
     position: relative;
     z-index: 3;
     cursor: pointer;
-    top: -140px;
+    top: -130px;
 
     @include m.respond('sm') {
       top: 40px;
@@ -112,7 +112,7 @@
     }
 
     p {
-      @include m.typography(21px, 21px, 400, v.$color-white);
+      @include m.typography(21px, 21px, 400, v.$color-black);
       position: relative;
       top: -20px;
       left: -10px;

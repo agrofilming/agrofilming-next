@@ -25,7 +25,7 @@ export const Header = () => {
         <Link href="/#portfolio">Портфоліо</Link>
         <Link href="/#contacts">Контакти</Link>
         <Button variant={'green'}>
-          <Link href="/brief">Заповнити бриф </Link>
+          <Link href="/brief">ХОЧУ ВІДЕО</Link>
         </Button>
       </div>
       {!open && <BurgerIcon className={styles['mob-icon']} onClick={handleOpen(true)} />}

@@ -11,7 +11,7 @@ export const PostItem: FC<IPostItemProps> = ({ image, description, title, id }) 
       <Image src={image} alt={`post-title-img-${id}`} />
       <h3>{title}</h3>
       <p>{description}</p>
-      <Link href={`/blog/post/${id}`}>
+      <Link href={`/blog/post/${id}`} target={'_blank'}>
         <Button>Читати</Button>
       </Link>
     </div>
