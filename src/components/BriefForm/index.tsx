@@ -10,9 +10,11 @@ import { Select } from '@/components/Select';
 import { Button } from '@/components';
 import { useState } from 'react';
 import { Modal } from '@/components/ModalNew';
+import { useRouter } from 'next/navigation';
 
 export const BriefForm = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   const {
     register,
     control,
@@ -30,7 +32,6 @@ export const BriefForm = () => {
       body: JSON.stringify(data),
     });
 
-    console.log(data);
     if (res.status === 200) {
       setOpen(true);
     }
@@ -73,6 +74,16 @@ export const BriefForm = () => {
         <div className={styles['modal-container']}>
           <h2>Дякуємо за звернення!</h2>
           <p>Наш менеджер зв&apos;яжеться з вами найближчим часом</p>
+          <Button
+            onClick={() => {
+              setOpen(false);
+              router.push('/');
+            }}
+            variant={'contained'}
+            height={'50px'}
+          >
+            OK
+          </Button>
         </div>
       </Modal>
     </div>
