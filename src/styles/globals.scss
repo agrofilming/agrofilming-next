@@ -261,3 +261,48 @@ video {
     }
   }
 }
+
+.ant-checkbox-group {
+  @include m.flex(5px, flex-start, flex-start, column);
+
+  .ant-checkbox {
+    @include m.flex(0, center, center);
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid v.$color-grey;
+    border-radius: 5px;
+    transition: 0.15s linear all;
+    background-color: transparent;
+    position: relative;
+
+    &-checked {
+      background-color: v.$color-dark-blue;
+      border-color: v.$color-dark-blue;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 2px;
+        width: 8px;
+        height: 15px;
+        border: solid v.$color-white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    &.disabled,
+    .ant-checkbox-inner {
+      display: none;
+    }
+  }
+
+  .ant-checkbox-group-item {
+    span {
+      @include m.typography(14px, 25px, 400, v.$color-dark-blue);
+    }
+  }
+}

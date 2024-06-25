@@ -24,3 +24,11 @@
     }
   }
 }
+
+.modal-container {
+  @include m.flex(10px, center, center, column);
+  height: 250px;
+  width: 500px;
+  background: v.$color-white;
+  border-radius: 30px;
+}
