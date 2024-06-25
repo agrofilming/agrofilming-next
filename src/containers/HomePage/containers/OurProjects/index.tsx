@@ -11,6 +11,14 @@ import romashka from '@/assets/images/projects/romashka.webp';
 import promoAo from '@/assets/images/projects/Promo_ao.webp';
 import abc from '@/assets/images/projects/abc.webp';
 import afina from '@/assets/images/projects/afina.webp';
+import vodafone from '@/assets/images/projects/vodafone.webp';
+import pheonix from '@/assets/images/projects/pheonix.webp';
+import dyno from '@/assets/images/projects/dyno.webp';
+import sherp from '@/assets/images/projects/sherp.webp';
+import strauss from '@/assets/images/projects/strauss.webp';
+import ecoflow from '@/assets/images/projects/ecoflow.webp';
+import autowelt from '@/assets/images/projects/autowelt.webp';
+import garmari from '@/assets/images/projects/garmari.webp';
 import styles from './index.module.scss';
 import { Project } from '@/containers/HomePage/containers/OurProjects/component/Project';
 import { ArrowIcon } from '@/assets/icons/arrowIcon';
@@ -88,6 +96,46 @@ const projects = [
   {
     img: afina,
     video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-Afina-Pallada.mp4',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: vodafone,
+    video: 'https://www.vasko.media/wp-content/uploads/2023/12/Vodafone_business_MASTER_VaskoMH.webm',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: pheonix,
+    video: 'https://www.vasko.media/wp-content/uploads/2024/03/Scania_Vasko_04.02.24_16_9_En_MASTER_3.webm',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: dyno,
+    video: 'https://www.vasko.media/wp-content/uploads/2023/12/RWCOM_VaskoMH.webm',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: sherp,
+    video: 'https://www.vasko.media/wp-content/uploads/2023/12/SHERP_VaskoMH.mp4',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: strauss,
+    video: 'https://www.vasko.media/wp-content/uploads/2023/12/Strauss_office_with_subtitles_MASTER_VaskoMH.webm4',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: ecoflow,
+    video: 'https://www.vasko.media/wp-content/uploads/2023/12/EcoFlow_shortMovie_VaskoMH.webm',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: autowelt,
+    video: 'https://www.vasko.media/wp-content/uploads/2023/12/Promo_awhelp24_Deutschland_MASTER_VaskoMH.webm',
+    title: 'Анонс YouTube випуску',
+  },
+  {
+    img: garmari,
+    video: 'https://www.vasko.media/wp-content/uploads/2023/12/garmari_MASTER_VaskoMH.webm',
     title: 'Анонс YouTube випуску',
     description: 'Description',
   },

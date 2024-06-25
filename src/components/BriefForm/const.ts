@@ -2,151 +2,157 @@ export const defaultValues = {
   clientName: '',
   email: '',
   phone: '+380',
+  videoPurpose: [],
 };
 
 export const questionData = [
   {
     question: 'Для чого Вам потрібно відео?',
+    checkBoxName: 'videoPurpose',
     checkboxVariants: [
       {
         id: 1,
         value: 'Відео для сайту',
-        isChecked: false,
+        label: 'Відео для сайту',
       },
       {
         id: 2,
         value: 'Відео для презентації продукту або послуги',
-        isChecked: false,
+        label: 'Відео для презентації продукту або послуги',
       },
       {
         id: 3,
         value: 'Відео для соцмереж / YouTube',
-        isChecked: false,
+        label: 'Відео для соцмереж / YouTube',
       },
       {
         id: 4,
         value: 'Реклама на ТБ',
-        isChecked: false,
+        label: 'Реклама на ТБ',
       },
       {
         id: 5,
         value: 'Реклама на медіафасадах',
-        isChecked: false,
+        label: 'Реклама на медіафасадах',
       },
     ],
   },
   {
     question: 'Яка головна мета Вашого відео?',
+    checkBoxName: 'videoGoal',
     checkboxVariants: [
       {
         id: 1,
         value: 'Розповісти про продукт або послугу для цільової аудиторії',
-        isChecked: false,
+        label: 'Розповісти про продукт або послугу для цільової аудиторії',
       },
       {
         id: 2,
         value: 'Підвищіти впізнаваність бренду',
-        isChecked: false,
+        label: 'Підвищіти впізнаваність бренду',
       },
       {
         id: 3,
         value: 'Сформувати довіру та посилити лояльність співробітників / партнерів / клієнтів',
-        isChecked: false,
+        label: 'Сформувати довіру та посилити лояльність співробітників / партнерів / клієнтів',
       },
       {
         id: 4,
         value: 'Розповісти про нову акцію / знижку',
-        isChecked: false,
+        label: 'Розповісти про нову акцію / знижку',
       },
       {
         id: 5,
         value: 'Зафільмувати відео-відгук клієнта',
-        isChecked: false,
+        label: 'Зафільмувати відео-відгук клієнта',
       },
     ],
   },
   {
     question: 'Яка тривалість відео?',
+    checkBoxName: 'videoDuration',
     checkboxVariants: [
       {
         id: 1,
         value: 'Від 10 до 30 секунд',
-        isChecked: false,
+        label: 'Від 10 до 30 секунд',
       },
       {
         id: 2,
         value: 'Від 30 до 60 секунд',
-        isChecked: false,
+        label: 'Від 30 до 60 секунд',
       },
       {
         id: 3,
         value: 'Від 1 до 3 хвилин',
-        isChecked: false,
+        label: 'Від 1 до 3 хвилин',
       },
       {
         id: 4,
         value: 'Від 3 хвилин та більше',
-        isChecked: false,
+        label: 'Від 3 хвилин та більше',
       },
       {
         id: 5,
         value: 'Ми будемо знімати кіно =)',
-        isChecked: false,
+        label: 'Ми будемо знімати кіно =)',
       },
     ],
   },
   {
     question: 'Коли Ви бажаєте отримати готовий відеоролик?',
+    checkBoxName: 'videoTime',
     checkboxVariants: [
       {
         id: 1,
         value: 'Завтра',
-        isChecked: false,
+        label: 'Завтра',
       },
       {
         id: 2,
         value: 'Через 3-4 дні',
-        isChecked: false,
+        label: 'Через 3-4 дні',
       },
       {
         id: 3,
         value: 'Через тиждень',
-        isChecked: false,
+        label: 'Через тиждень',
       },
       {
         id: 4,
         value: 'Через 2 тижні',
-        isChecked: false,
+        label: 'Через 2 тижні',
       },
       {
         id: 5,
         value: 'Строки не важливі - головне якість',
-        isChecked: false,
+        label: 'Строки не важливі - головне якість',
       },
     ],
   },
   {
     question: 'Потрібен сценарій для Вашого відео?',
+    checkBoxName: 'videoScenario',
     checkboxVariants: [
       {
         id: 1,
         value: 'Так, мені потрібна допомога',
-        isChecked: false,
+        label: 'Так, мені потрібна допомога',
       },
       {
         id: 2,
         value: 'Бачив чудову ідею, хочу її відтворити',
-        isChecked: false,
+        label: 'Бачив чудову ідею, хочу її відтворити',
       },
       {
         id: 3,
         value: 'В мене свій сценарій та текст',
-        isChecked: false,
+        label: 'В мене свій сценарій та текст',
       },
       {
         id: 4,
         value: 'Необхідно просто фільмувати по факту',
-        isChecked: false,
+        label: 'Необхідно просто фільмувати по факту',
       },
     ],
   },

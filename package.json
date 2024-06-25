@@ -11,6 +11,7 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.3",
     "@types/body-scroll-lock": "^3.1.2",
     "@types/nodemailer": "^6.4.15",
     "antd": "^5.17.0",
