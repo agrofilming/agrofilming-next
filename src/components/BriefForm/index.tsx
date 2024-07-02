@@ -61,9 +61,22 @@ export const BriefForm = () => {
 
         <PhoneInput control={control} errorMessage={errors.phone?.message} />
 
-        <Select name={'budget'} options={budgetOptions} control={control} watch={watch} />
+        <Select
+          name={'budget'}
+          errorMessage={errors.budget?.message}
+          options={budgetOptions}
+          control={control}
+          watch={watch}
+        />
 
-        <Select name={'fromWhere'} options={findOptions} control={control} watch={watch} />
+        <Select
+          name={'fromWhere'}
+          errorMessage={errors.fromWhere?.message}
+          options={findOptions}
+          required={false}
+          control={control}
+          watch={watch}
+        />
 
         <Button type={'submit'} variant={'contained'} width={'100%'} height={'50px'}>
           Відправити
