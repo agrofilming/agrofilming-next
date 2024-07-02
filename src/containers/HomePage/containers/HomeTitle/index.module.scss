@@ -31,6 +31,10 @@
   width: 100vw;
   position: relative;
 
+  @include m.respond('md') {
+    overflow: hidden;
+  }
+
   p {
     @include m.typography(17px, 21px, 300, v.$color-white);
     position: absolute;

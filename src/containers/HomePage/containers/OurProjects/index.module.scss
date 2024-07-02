@@ -34,6 +34,17 @@
     @include m.respond('sm') {
       grid-template-columns: 1fr;
     }
+
+    .vasko {
+      @include m.flex(0, center, center);
+      width: 100%;
+      background: v.$color-black;
+
+      img {
+        max-height: 350px;
+        width: auto;
+      }
+    }
   }
 
   .more-button {
@@ -119,7 +130,7 @@
     }
 
     &.open {
-      @include m.flex(50px, center, center);
+      @include m.flex(0, flex-start, flex-start, column);
     }
   }
 }

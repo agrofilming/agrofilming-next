@@ -42,7 +42,10 @@
       left: -50px;
       bottom: -15px;
       z-index: 0;
-      opacity: 0.1;
+
+      @include m.respond('xl') {
+        opacity: 0.1;
+      }
     }
 
     .logoSolo {
@@ -52,6 +55,7 @@
       left: -50px;
       bottom: -20px;
       z-index: 0;
+
       @include m.respond('xl') {
         opacity: 0.1;
       }
@@ -75,7 +79,7 @@
     }
 
     .nav-top-section {
-      @include m.flex(10px, flex-start, space-between);
+      @include m.flex(50px, flex-start, space-between);
     }
 
     .main-nav,

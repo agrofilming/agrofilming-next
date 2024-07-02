@@ -13,6 +13,7 @@ import lg from '@/assets/images/partners/lg.webp';
 import quantum from '@/assets/images/partners/quantum.webp';
 import spectr from '@/assets/images/partners/spectr-agro.webp';
 import unifer from '@/assets/images/partners/unifer.webp';
+import scania from '@/assets/images/partners/scania.webp';
 import { PartnerItem } from '@/containers/HomePage/containers/OurPartners/components/PartnerItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -42,6 +43,7 @@ const partnersList = [
   quantum,
   spectr,
   unifer,
+  scania,
 ];
 export const OurPartners = () => {
   const isMobile = useMedia('(max-width: 767px)');
