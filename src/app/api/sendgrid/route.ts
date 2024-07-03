@@ -1,8 +1,6 @@
 import * as sgMail from '@sendgrid/mail';
 
-const SENDGRID_API_KEY = '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';
-
-sgMail.setApiKey(SENDGRID_API_KEY);
+sgMail.setApiKey(`${process.env.NEXT_PUBLIC_SENDGRID_API_KEY}`);
 
 export async function POST(req: any) {
   try {
