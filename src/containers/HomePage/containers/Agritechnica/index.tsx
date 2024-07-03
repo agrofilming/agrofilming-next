@@ -5,19 +5,22 @@ import Image from 'next/image';
 import blueBanner from '@/assets/images/banner_agritechnica_2019.webp';
 import yellowBanner from '@/assets/images/agritechnica-yellow.webp';
 import { PlayIcon } from '@/assets/icons/playIcon';
-import { ModalComponent } from '@/components/Modal';
 import { useState } from 'react';
+import { Modal } from '@/components/ModalNew';
 
 export const Agritechnica = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <section className={styles.container}>
       <div className={styles.banners}>
-        <Image src={blueBanner} alt={'blue-banner'} />
-        <Image src={yellowBanner} alt={'yellow-banner'} />
+        <Image src={blueBanner} alt={'blue-banner'} className={styles['blue-banner']} />
+        <Image src={yellowBanner} alt={'yellow-banner'} className={styles['yellow-banner']} />
       </div>
       <div className={styles['video-button']} onClick={() => setModalOpen(true)}>
         <PlayIcon />
+        <p>
+          Тицьни на мене тут <br /> маленький відосік
+        </p>
       </div>
       <div className={styles['video-bg']}>
         <video
@@ -28,13 +31,13 @@ export const Agritechnica = () => {
           src="https://www.agrofilming.com/wp-content/uploads/2024/02/AgriTechnika_BG-1.webm"
         />
       </div>
-      <ModalComponent isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+      <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>
         <video
           src={'https://www.agrofilming.com/wp-content/uploads/2023/10/AGRI-TECHNICA.mp4'}
           autoPlay={modalOpen}
           controlsList={'nodownload'}
         ></video>
-      </ModalComponent>
+      </Modal>
     </section>
   );
 };

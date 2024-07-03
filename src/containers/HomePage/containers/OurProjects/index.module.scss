@@ -3,35 +3,59 @@
 
 .container {
   position: relative;
-  @include m.flex(50px, center, center, column);
-  //background-image: url("/projects-bg.webp");
-  background: #1c9e0040;
+  @include m.flex(0, center, center, column);
+  background: v.$color-light-grey;
   background-size: contain;
-  padding: 80px 0;
+  padding-bottom: 15px;
   top: -10px;
   margin-bottom: -10px;
 
   h2 {
     font-size: 153px;
     font-weight: 600;
-    color: v.$color-dark-green;
+    color: v.$color-dark-blue;
   }
 
   .projects {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 30px;
-    grid-column-gap: 30px;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+
+    @include m.respond('lg') {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include m.respond('md') {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include m.respond('sm') {
+      grid-template-columns: 1fr;
+    }
+
+    .vasko {
+      @include m.flex(0, center, center);
+      width: 100%;
+      background: v.$color-black;
+
+      img {
+        max-height: 350px;
+        width: auto;
+      }
+    }
   }
 
   .more-button {
     @include m.flex(5px, center, center);
     width: 175px;
     height: 46px;
-    background: v.$color-dark-green;
+    background: v.$color-dark-blue;
     padding: 15px 25px;
-    border-radius: 6px;
+    border-radius: 30px;
     cursor: pointer;
+    margin-top: 15px;
 
     p {
       @include m.typography(16px, 16px, 300, v.$color-white);
@@ -44,35 +68,69 @@
 
   .video-reviews {
     display: none;
-    width: 95%;
+    width: 100%;
 
     h3 {
-      span {
-        font-size: 136px;
-        line-height: 130px;
-      }
-
+      width: 100%;
+      max-width: 33.3vw;
+      text-align: center;
       font-weight: 600;
       font-size: 60px;
       line-height: 40px;
 
+      @include m.respond('lg') {
+        max-width: 50vw;
+      }
+
+      @include m.respond('md') {
+        max-width: 100vw;
+      }
+
+      @include m.respond('sm') {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      span {
+        font-size: 136px;
+        line-height: 130px;
+
+        @include m.respond('sm') {
+          font-size: 90px;
+          line-height: 70px;
+        }
+      }
+
       .small {
         font-size: 50px;
         line-height: 70px;
+
+        @include m.respond('sm') {
+          font-size: 30px;
+          line-height: 40px;
+        }
       }
     }
 
     .video-list {
-      @include m.flex(50px, flex-start, flex-start, row, wrap);
+      @include m.flex(0, center, flex-start, row, wrap);
       width: 100%;
 
       iframe {
-        border-radius: 25px;
+        width: 33.3vw;
+
+        @include m.respond('lg') {
+          width: 50vw;
+        }
+
+        @include m.respond('md') {
+          width: 100vw;
+        }
       }
     }
 
     &.open {
-      @include m.flex(50px, center, center);
+      @include m.flex(0, flex-start, flex-start, column);
     }
   }
 }

@@ -4,14 +4,29 @@
 .container {
   @include m.flex(60px, center, center, column);
   position: relative;
-  background: url('/youtube-bg.webp');
+  background-image: url('/youtube_red.webp');
+
   background-size: cover;
   min-height: 100vh;
   padding: 50px;
 
+  @include m.respond('lg') {
+    @include m.flex(60px, center, flex-start, column);
+    min-height: auto;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
   h2 {
     @include m.typography(54px, 62px, 500, v.$color-cream-light);
     text-align: center;
+
+    @include m.respond('lg') {
+      @include m.typography(30px, 40px, 500, v.$color-cream-light);
+    }
 
     span {
       font-weight: 700;

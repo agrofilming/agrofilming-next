@@ -1,0 +1,32 @@
+@use 'src/styles/variables' as v;
+@use 'src/styles/mixins' as m;
+
+.container {
+  @include m.flex(10px, center, flex-start, column);
+  width: 100%;
+  max-width: 30vw;
+  padding: 10px;
+  border-radius: 10px;
+  background: v.$color-light-grey;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  h3 {
+    @include m.typography(22px, 27px, 700, v.$color-dark-blue);
+  }
+
+  p {
+    @include m.typography(15px, 21px, 400, v.$color-dark-blue);
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
+}

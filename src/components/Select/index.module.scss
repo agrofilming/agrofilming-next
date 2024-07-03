@@ -1,0 +1,33 @@
+@use 'src/styles/mixins' as m;
+@use 'src/styles/variables' as v;
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  &.mount {
+    display: block;
+  }
+}
+
+.container {
+  @include m.flex(10px, flex-start, flex-start, column);
+  position: relative;
+  height: 50px;
+  border: 1px solid v.$color-dark-grey;
+  border-radius: 30px;
+  background-color: transparent;
+  width: 100%;
+
+  &.error {
+    .label-container {
+      .label {
+        color: v.$color-red;
+      }
+    }
+  }
+}

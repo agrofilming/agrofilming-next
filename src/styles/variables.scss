@@ -4,10 +4,19 @@ $color-black: #000000;
 $color-red: #f7020b;
 $color-grey: #818a91;
 $color-dark-grey: #7b85a0;
+$color-light-grey: #f2f2f2;
 $color-dark-purple: #42435c;
 $color-green: #1c9e00;
 $color-dark-green: #1a6925;
 $color-blue: #2196f3;
-$color-dark-blue: #254057;
+$color-dark-blue: #131e2c;
 $color-cream: #ccc9c9;
 $color-cream-light: #f9f6d2;
+$color-yellow: #ffdf00;
+$color-gradient: radial-gradient(circle, rgba(108, 139, 93, 1) 2%, rgba(52, 54, 56, 1) 100%);
+$color-gradient-footer: linear-gradient(
+  90deg,
+  rgba(24, 30, 39, 0.9360337885154062) 10%,
+  rgba(19, 30, 44, 1) 58%,
+  rgba(18, 27, 39, 0.821187850140056) 96%
+);

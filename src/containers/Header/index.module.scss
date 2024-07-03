@@ -7,18 +7,47 @@
   width: 100%;
   position: fixed;
   z-index: 99;
+  padding-top: 10px;
+
+  @include m.respond('sm') {
+    position: relative;
+    background-color: v.$color-black;
+  }
 
   .nav {
     @include m.flex(0, center, space-between);
 
-    a {
+    > a {
       padding: 10px;
 
       &:hover {
         padding-bottom: 7px;
         color: v.$color-green;
-        border-bottom: 3px solid v.$color-green;
+        border-bottom: 3px solid v.$color-dark-green;
       }
+    }
+
+    button {
+      margin-left: 5px;
+
+      &:hover {
+        > a {
+          color: v.$color-black;
+        }
+      }
+    }
+
+    @include m.respond('sm') {
+      display: none;
+    }
+  }
+
+  .nav-mobile,
+  .mob-icon {
+    display: none;
+
+    @include m.respond('sm') {
+      display: block;
     }
   }
 
@@ -26,4 +55,12 @@
     max-width: 120px;
     height: auto;
   }
+}
+
+.nav-mobile {
+  @include m.flex(20px, flex-start, flex-start, column);
+  width: 100vw;
+  height: 100vh;
+  background-color: v.$color-dark-blue;
+  padding: 30px;
 }

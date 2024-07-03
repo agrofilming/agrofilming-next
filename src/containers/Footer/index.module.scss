@@ -2,82 +2,19 @@
 @use 'src/styles/variables' as v;
 
 .container {
-  @include m.container(20px 50px, v.$color-dark-blue);
-  @include m.flex(0, flex-end, space-between);
+  @include m.container(20px 50px, #131e2c);
+  @include m.flex(50px, center, flex-end);
   padding-top: 40px;
+  height: 350px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: v.$color-gradient-footer;
 
-  .copyright {
-    position: relative;
-
-    .logo {
-      max-width: 640px;
-      height: auto;
-      position: absolute;
-      left: -50px;
-      bottom: -20px;
-      z-index: 0;
-    }
-
-    span {
-      padding-left: 200px;
-      @include m.typography(14px, 17px, 400, v.$color-white)
-    }
-  }
-
-  .nav {
-    @include m.flex(10px, flex-start, space-between, column);
-    position: relative;
-    z-index: 2;
-
-    .nav-top-section {
-      @include m.flex(10px, flex-start, space-between);
-    }
-
-    .nav-bottom-section {
-      .contacts-item {
-        @include m.flex(20px, center, flex-start);
-        width: 400px;
-      }
-    }
-
-    .main-nav, .posts, .contacts {
-      @include m.flex(5px, flex-start, flex-start, column)
-    }
-
-  }
-
-  .right-block {
-    @include m.flex(80px, flex-start, space-between, column);
-    align-self: flex-start;
-
-    .posts, .partners {
-      @include m.flex(5px, flex-start, flex-start, column)
-    }
-
-    .partners-items {
-      @include m.flex(20px, flex-start, flex-start);
-
-      .garmari {
-        @include m.flex(5px, flex-start, flex-start, column);
-
-        img {
-          max-width: 120px;
-          height: auto;
-        }
-      }
-
-      .vasko {
-        img {
-          max-width: 40px;
-          height: auto;
-        }
-      }
-    }
-
-    p {
-      @include m.typography(15px, 24px, 500, v.$color-cream);
-      padding: 5px;
-    }
+  @include m.respond('md') {
+    @include m.flex(10px, center, flex-start, column);
+    width: 100vw;
+    height: 500px;
   }
 
   a {
@@ -87,6 +24,88 @@
 
     &:hover {
       border: 1px solid v.$color-cream;
+      border-radius: 10px;
+    }
+  }
+
+  .copyright {
+    position: absolute;
+    align-self: flex-end;
+    left: 50px;
+    bottom: 15px;
+    z-index: -1;
+
+    .logo {
+      max-width: 550px;
+      height: auto;
+      position: absolute;
+      left: -50px;
+      bottom: -15px;
+      z-index: 0;
+
+      @include m.respond('xl') {
+        opacity: 0.1;
+      }
+    }
+
+    .logoSolo {
+      max-width: 550px;
+      height: auto;
+      position: relative;
+      left: -50px;
+      bottom: -20px;
+      z-index: 0;
+
+      @include m.respond('xl') {
+        opacity: 0.1;
+      }
+    }
+
+    span {
+      @include m.typography(10px, 10px, 100, v.$color-white);
+      position: absolute;
+      right: 200px;
+      bottom: -3px;
+    }
+  }
+
+  .nav {
+    @include m.flex(50px, flex-start, space-between, column);
+    position: relative;
+    z-index: 2;
+
+    @include m.respond('md') {
+      @include m.flex(10px, center, flex-start, column);
+    }
+
+    .nav-top-section {
+      @include m.flex(50px, flex-start, space-between);
+    }
+
+    .main-nav,
+    .posts {
+      @include m.flex(5px, flex-start, flex-start, column);
+    }
+  }
+
+  .right-block {
+    @include m.flex(20px, center, center, column);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+
+    h3 {
+      @include m.typography(20px, 30px, 400, v.$color-cream);
+      text-transform: uppercase;
+    }
+
+    p {
+      @include m.typography(15px, 15px, 100, v.$color-cream);
+    }
+
+    a:hover {
+      @include m.typography(15px, 24px, 500, v.$color-black);
+      border: none;
       border-radius: 10px;
     }
   }

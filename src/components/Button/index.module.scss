@@ -1,0 +1,74 @@
+@use 'src/styles/mixins' as m;
+@use 'src/styles/variables' as v;
+
+.btn {
+  @include m.flex(var(--btn-gap), center, center);
+  cursor: pointer;
+  min-width: var(--btn-width);
+  height: var(--btn-height);
+  text-transform: var(--btn-textTransform);
+  border-radius: 10px;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.contained {
+  @include m.typography(var(--btn-fontSize), 17px, var(--btn-fontWeight), v.$color-white);
+  background-color: v.$color-dark-blue;
+  border: none;
+  text-transform: uppercase;
+  padding: 0 20px;
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: v.$color-dark-green;
+  }
+}
+
+.green {
+  @include m.typography(var(--btn-fontSize), 17px, var(--btn-fontWeight), v.$color-white);
+  background-color: v.$color-green;
+  border: none;
+  text-transform: uppercase;
+  padding: 0 20px;
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    @include m.typography(var(--btn-fontSize), 17px, var(--btn-fontWeight), v.$color-dark-green);
+    background-color: v.$color-cream;
+  }
+}
+
+.outlined {
+  @include m.typography(var(--btn-fontSize), 17px, var(--btn-fontWeight));
+  border: 1px solid v.$color-white;
+  background-color: transparent;
+
+  &.active,
+  &:hover {
+    background-color: v.$color-white;
+    color: v.$color-dark-blue;
+
+    svg {
+      color: v.$color-dark-blue;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

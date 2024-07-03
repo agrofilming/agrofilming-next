@@ -1,0 +1,26 @@
+@use 'src/styles/mixins' as m;
+@use 'src/styles/variables' as v;
+
+.container {
+  @include m.flex(50px, center, flex-start, column);
+
+  > img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: -90px;
+  }
+
+  h1 {
+    @include m.typography(90px, 100px, 500);
+  }
+
+  .posts {
+    @include m.flex(50px, center, center);
+    flex-wrap: wrap;
+
+    @include m.respond('md') {
+      padding: 0 20px;
+    }
+  }
+}
