@@ -15,14 +15,7 @@ export const HomeTitle = () => {
       <div className={styles['video-button']} onClick={() => setModalOpen(true)}>
         <PlayIcon />
       </div>
-      <video
-        className={styles['video-bg']}
-        autoPlay
-        muted
-        playsInline
-        loop
-        src="https://www.agrofilming.com/wp-content/uploads/2024/02/he8uqg.mp4#t=-4"
-      />
+      <video className={styles['video-bg']} autoPlay muted playsInline loop src="/video/SHOWREEL_for_site_17sec.webm" />
       <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>
         <video
           src={'https://www.agrofilming.com/wp-content/uploads/2023/09/SHOWREEL_AgroFilmProduction_v4.mp4'}
