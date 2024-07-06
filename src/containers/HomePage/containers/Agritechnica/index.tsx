@@ -28,12 +28,12 @@ export const Agritechnica = () => {
           muted
           playsInline
           loop
-          src="https://www.agrofilming.com/wp-content/uploads/2024/02/AgriTechnika_BG-1.webm"
+          src="https://agrofilm.s3.eu-north-1.amazonaws.com/main/AgriTechnika_BG.webm"
         />
       </div>
       <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>
         <video
-          src={'https://www.agrofilming.com/wp-content/uploads/2023/10/AGRI-TECHNICA.mp4'}
+          src={'https://agrofilm.s3.eu-north-1.amazonaws.com/main/AgriTechnika.webm'}
           autoPlay={modalOpen}
           controlsList={'nodownload'}
         ></video>

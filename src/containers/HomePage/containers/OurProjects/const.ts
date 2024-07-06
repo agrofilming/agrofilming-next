@@ -22,74 +22,79 @@ import garmari from '@/assets/images/projects/garmari.webp';
 export const projects = [
   {
     img: discovery,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-DroneUa_XAG_Discovery-.mp4.mp4',
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_DroneUa_XAG_Discovery_.mp4.webm',
     title: 'Фільм у форматі Discovery',
     description: 'Description',
   },
   {
     img: ovochar,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/Овочар.mp4',
+    video:
+      'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_%D0%9E%D0%B2%D0%BE%D1%87%D0%B0%D1%80.webm',
     title: 'Відео для соціальних мереж',
     description: 'Description',
   },
   {
     img: unifer,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-Unifer-Wuxal.mp4',
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_Unifer_Wuxal.webm',
     title: 'Відео відгук клієнта',
     description: 'Description',
   },
   {
     img: advertising,
     video:
-      'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-Реклама-сівалки-Massey-Ferguson-для-BIZON-TECH.mp4',
+      'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction+%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0+%D1%81%D1%96%D0%B2%D0%B0%D0%BB%D0%BA%D0%B8+Massey+Ferguson+%D0%B4%D0%BB%D1%8F+BIZON+TECH.webm',
     title: 'Реклама',
     description: 'Description',
   },
   {
     img: promoDrone,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-Drone-Ua.mp4',
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_Drone_Ua.webm',
     title: 'Промо відеоролик',
     description: 'Description',
   },
   {
     img: xagPromo,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-XAG.mp4',
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction+XAG.webm',
     title: 'Промо відеоролик',
     description: 'Description',
   },
   {
     img: lg,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/ЛГ31388_правки.mp4',
+    video:
+      'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4_%D0%B3%D0%B8%D0%B1%D1%80%D0%B8%D0%B4%D1%96%D0%B2.mp4',
     title: 'Відео огляд гербіцидів',
     description: 'Description',
   },
   {
     img: lgGerb,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/LG-1.mp4',
+    video:
+      'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_%D0%B2%D1%96%D0%B4%D0%B5%D0%BE_%D0%B7%D0%B2%D1%96%D1%82.webm',
     title: 'Відео огляд гербіцидів',
     description: 'Description',
   },
   {
     img: romashka,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-Ромашка.mp4',
+    video:
+      'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_%D0%A0%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0.webm',
     title: 'Анонс YouTube випуску',
     description: 'Description',
   },
   {
     img: promoAo,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-АО.mp4',
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction+%D0%90%D0%9E.webm',
     title: 'Анонс YouTube каналу',
     description: 'Description',
   },
   {
     img: abc,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-АБЦ-анонс-випуску.mp4',
+    video:
+      'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction+%D0%90%D0%91%D0%A6+%D0%B0%D0%BD%D0%BE%D0%BD%D1%81+%D0%B2%D0%B8%D0%BF%D1%83%D1%81%D0%BA%D1%83.webm',
     title: 'Анонс YouTube випуску',
     description: 'Description',
   },
   {
     img: afina,
-    video: 'https://www.agrofilming.com/wp-content/uploads/2023/09/AgroFilmProduction-Afina-Pallada.mp4',
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_Afina_Pallada.webm',
     title: 'Анонс YouTube випуску',
   },
 ];

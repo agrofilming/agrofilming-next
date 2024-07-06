@@ -69,7 +69,7 @@ export const OurPartners = () => {
     <section className={styles.container}>
       <div className={styles['top-block']}>
         <div className={styles.title}>
-          <h2>НАШИ БУСІНКИ</h2>
+          <h2>НАШІ БУСІНКИ</h2>
         </div>
         <Image src={lina} alt={'lina'} />
       </div>
