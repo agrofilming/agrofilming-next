@@ -2,7 +2,8 @@
 @use 'src/styles/variables' as v;
 
 .container {
-  @include m.flex(50px, center, flex-start, column);
+  @include m.flex(0, center, flex-start, column);
+  padding-bottom: 30px;
 
   > img {
     position: relative;

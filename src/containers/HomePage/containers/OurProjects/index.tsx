@@ -4,10 +4,7 @@ import { Project } from '@/containers/HomePage/containers/OurProjects/component/
 import { ArrowIcon } from '@/assets/icons/arrowIcon';
 import cn from 'classnames';
 import { useMemo, useState } from 'react';
-import { projects, vaskoProjects, youTubeLinks } from '@/containers/HomePage/containers/OurProjects/const';
-import Image from 'next/image';
-
-import vasko from '@/assets/images/vasko.png';
+import { projects, youTubeLinks } from '@/containers/HomePage/containers/OurProjects/const';
 
 export const OurProjects = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,15 +41,16 @@ export const OurProjects = () => {
             ></iframe>
           ))}
         </div>
-        <div className={styles.projects}>
-          <div className={styles.vasko}>
-            <Image src={vasko} alt={'vasko'} />
-          </div>
+        {/* VASKO videos */}
+        {/*<div className={styles.projects}>*/}
+        {/*  <div className={styles.vasko}>*/}
+        {/*    <Image src={vasko} alt={'vasko'} />*/}
+        {/*  </div>*/}
 
-          {vaskoProjects.map((el, index) => (
-            <Project key={index} video={el.video} img={el.img} title={el.title} />
-          ))}
-        </div>
+        {/*  {vaskoProjects.map((el, index) => (*/}
+        {/*    <Project key={index} video={el.video} img={el.img} title={el.title} />*/}
+        {/*  ))}*/}
+        {/*</div>*/}
       </div>
     </section>
   );

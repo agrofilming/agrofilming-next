@@ -18,7 +18,11 @@ export const CreativeTeamBlock = () => (
     </div>
     <div className={styles['bottom-block']}>
       <Image src={creativeTeam} alt={'creative-team'} />
-      <video autoPlay src={'https://www.agrofilming.com/wp-content/uploads/2023/06/why-us-NEW-2.mp4'} />
+      <video
+        autoPlay
+        src={'https://agrofilm.s3.eu-north-1.amazonaws.com/main/why_us_NEW.webm'}
+        controlsList={'nodownload'}
+      ></video>
     </div>
   </section>
 );

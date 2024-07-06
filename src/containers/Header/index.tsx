@@ -24,9 +24,9 @@ export const Header = () => {
       <div className={styles.nav}>
         <Link href="/#portfolio">Портфоліо</Link>
         <Link href="/#contacts">Контакти</Link>
-        <Button variant={'green'}>
-          <Link href="/brief">ХОЧУ ВІДЕО</Link>
-        </Button>
+        <Link href="/brief">
+          <Button variant={'green'}>ХОЧУ ВІДЕО</Button>
+        </Link>
       </div>
       {!open && <BurgerIcon className={styles['mob-icon']} onClick={handleOpen(true)} />}
       <Modal open={open} onCancel={handleOpen(false)} width={'100vh'} padding={'0'} showClose>

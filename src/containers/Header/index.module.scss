@@ -2,12 +2,11 @@
 @use '@/styles/mixins' as m;
 
 .container {
-  @include m.container(10px 50px, #000000cc);
+  @include m.container(20px 50px 20px, #000000cc);
   @include m.flex(0, center, space-between);
   width: 100%;
   position: fixed;
   z-index: 99;
-  padding-top: 10px;
 
   @include m.respond('sm') {
     position: relative;
@@ -18,12 +17,22 @@
     @include m.flex(0, center, space-between);
 
     > a {
-      padding: 10px;
+      padding: 10px 20px;
 
       &:hover {
         padding-bottom: 7px;
         color: v.$color-green;
         border-bottom: 3px solid v.$color-dark-green;
+      }
+
+      &:last-child {
+        padding: 0;
+
+        &:hover {
+          padding-bottom: 0;
+          color: v.$color-green;
+          border-bottom: none;
+        }
       }
     }
 
