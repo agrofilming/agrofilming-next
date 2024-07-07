@@ -11,9 +11,11 @@ import { Button } from '@/components';
 import { useState } from 'react';
 import { Modal } from '@/components/ModalNew';
 import { useRouter } from 'next/navigation';
+import { Spin } from 'antd';
 
 export const BriefForm = () => {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const {
     register,
@@ -27,12 +29,14 @@ export const BriefForm = () => {
   });
 
   const onSubmit = async (data: IStepperForm) => {
+    setLoading(true);
     const res = await fetch('/api/sendgrid', {
       method: 'POST',
       body: JSON.stringify(data),
     });
 
     if (res.status === 200) {
+      setLoading(false);
       setOpen(true);
     }
   };
@@ -67,6 +71,7 @@ export const BriefForm = () => {
           options={budgetOptions}
           control={control}
           watch={watch}
+          filter={false}
         />
 
         <Select
@@ -76,11 +81,16 @@ export const BriefForm = () => {
           required={false}
           control={control}
           watch={watch}
+          filter={false}
         />
 
-        <Button type={'submit'} variant={'contained'} width={'100%'} height={'50px'}>
-          Відправити
-        </Button>
+        {loading ? (
+          <Spin />
+        ) : (
+          <Button type={'submit'} variant={'contained'} width={'100%'} height={'50px'}>
+            Відправити
+          </Button>
+        )}
       </form>
 
       <Modal open={open} onCancel={() => setOpen(false)}>

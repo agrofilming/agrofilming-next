@@ -32,7 +32,7 @@
   position: relative;
   background: url('/agritechnica-bg.webp');
   background-size: cover;
-  padding: 110px 60px 0;
+  padding: 60px 60px 80px;
   min-height: 275px;
 
   .banners {
@@ -43,27 +43,27 @@
 
     .blue-banner {
       position: relative;
-      top: 30px;
+      top: 80px;
 
       @include m.respond('lg') {
-        top: -40px;
+        top: 10px;
       }
 
       @include m.respond('sm') {
         width: 90vw;
-        top: 0;
+        top: 50px;
         left: -50px;
       }
     }
 
     .yellow-banner {
       position: relative;
-      top: -30px;
+      top: 20px;
 
       @include m.respond('lg') {
         position: absolute;
         right: 0;
-        top: 400px;
+        top: 450px;
       }
 
       @include m.respond('sm') {
@@ -86,7 +86,8 @@
     position: relative;
     z-index: 3;
     cursor: pointer;
-    top: -130px;
+    top: 20px;
+    right: -60px;
 
     @include m.respond('sm') {
       top: 40px;
@@ -150,6 +151,17 @@
 
     video {
       width: 100%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
     }
   }
 }

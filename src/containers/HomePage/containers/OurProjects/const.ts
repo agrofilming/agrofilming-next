@@ -97,6 +97,11 @@ export const projects = [
     video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_Afina_Pallada.webm',
     title: 'Анонс YouTube випуску',
   },
+  {
+    img: garmari,
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/Quantum_promo_En_MASTER.webm',
+    title: 'Промо відеоролик',
+  },
 ];
 
 export const vaskoProjects = [
