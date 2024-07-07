@@ -29,7 +29,7 @@ export const blogData = [
     content: [
       {
         text: (
-          <p className={styles.text}>
+          <div className={styles.text}>
             Історично виробництво відео складається з трьох етапів: попереднього виробництва, виробництва та
             пост-виробництва. Ці етапи відомі як <br />– Пре-продакшн <br />– Продакшн <br />– Постпродакшн <br />
             <br />
@@ -37,8 +37,16 @@ export const blogData = [
             з’являється ідея, до моменту, коли відео або фільм виходить у загальний доступ. <br />
             <br />
             <br />
-            <p style={{ fontWeight: 400 }}>Підготовка до виробництва. Пре-продакшн.</p>
-          </p>
+            <span
+              style={{
+                fontWeight: 400,
+                fontSize: 20,
+                lineHeight: '24px',
+              }}
+            >
+              Підготовка до виробництва. Пре-продакшн.
+            </span>
+          </div>
         ),
         img: post1firstImg,
       },
@@ -55,7 +63,16 @@ export const blogData = [
             <br />
             <br />
             <br />
-            <p style={{ fontWeight: 400 }}> Виробництво. Продакшн.</p>
+            <span
+              style={{
+                fontWeight: 400,
+                fontSize: 20,
+                lineHeight: '24px',
+              }}
+            >
+              {' '}
+              Виробництво. Продакшн.
+            </span>
           </p>
         ),
         img: post1secondImg,
@@ -71,7 +88,15 @@ export const blogData = [
             <br />
             <br />
             <br />
-            <p style={{ fontWeight: 400 }}> Пост-виробництво. Постпродакшн.</p>
+            <span
+              style={{
+                fontWeight: 400,
+                fontSize: 20,
+                lineHeight: '24px',
+              }}
+            >
+              Пост-виробництво. Постпродакшн.
+            </span>
           </p>
         ),
         img: post1thirdImg,

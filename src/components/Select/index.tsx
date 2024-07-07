@@ -21,6 +21,7 @@ export const Select: FC<ISelectProps> = ({
   loading = false,
   emptyContent,
   onSearch,
+  showSearch = false,
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -58,7 +59,7 @@ export const Select: FC<ISelectProps> = ({
                   setDropdownOpen(open);
                   if (onSearch && !open) onSearch('');
                 }}
-                showSearch
+                showSearch={showSearch}
                 onSearch={value => onSearch && onSearch(value)}
                 onClear={() => onSearch && onSearch('')}
                 placeholder={fieldName}

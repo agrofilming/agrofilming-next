@@ -27,12 +27,12 @@ export const PostPage: FC<IPostPageProps> = ({ id }) => {
 
       {data?.content.map(({ text, img }, index) => (
         <div key={index} className={styles.content}>
-          <p>{text}</p>
+          <div>{text}</div>
           <Image src={img} alt={`post-content-img-${index}`} />
         </div>
       ))}
       <div className={styles.content}>
-        <p className={styles.brief}>{data?.brief}</p>
+        <div className={styles.brief}>{data?.brief}</div>
       </div>
 
       <div className={styles.attention}>

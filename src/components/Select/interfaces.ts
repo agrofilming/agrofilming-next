@@ -21,4 +21,5 @@ export interface ISelectProps {
   optionalTitle?: boolean;
   emptyContent?: JSX.Element;
   loading?: boolean;
+  showSearch?: boolean;
 }
