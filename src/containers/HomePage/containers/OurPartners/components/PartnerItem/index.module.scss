@@ -9,8 +9,8 @@
   border-radius: 15px;
 
   @include m.respond('sm') {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
   }
 
   img {
@@ -19,6 +19,7 @@
 
     @include m.respond('sm') {
       width: 100%;
+      max-width: 120px;
     }
   }
 }
