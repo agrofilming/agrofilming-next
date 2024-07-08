@@ -17,6 +17,7 @@ import sherp from '@/assets/images/projects/sherp.webp';
 import strauss from '@/assets/images/projects/strauss.webp';
 import ecoflow from '@/assets/images/projects/ecoflow.webp';
 import autowelt from '@/assets/images/projects/autowelt.webp';
+import quantum from '@/assets/images/projects/Quantum.webp';
 import garmari from '@/assets/images/projects/garmari.webp';
 
 export const projects = [
@@ -98,7 +99,7 @@ export const projects = [
     title: 'Анонс YouTube випуску',
   },
   {
-    img: garmari,
+    img: quantum,
     video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/Quantum_promo_En_MASTER.webm',
     title: 'Промо відеоролик',
   },

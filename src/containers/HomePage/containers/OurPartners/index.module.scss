@@ -13,7 +13,10 @@
   }
 
   @include m.respond('sm') {
+    height: 50vh;
     padding: 30px 30px 0;
+    margin-bottom: 30px;
+    overflow: hidden;
   }
 
   &::before {
@@ -28,6 +31,12 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    @include m.respond('sm') {
+      top: 130px;
+      height: 80%;
+      background-size: cover;
+    }
   }
 
   .top-block {
@@ -61,6 +70,7 @@
       @include m.respond('md') {
         h2 {
           @include m.typography(30px, 30px, 700, v.$color-white);
+          margin-bottom: 10px;
         }
       }
     }

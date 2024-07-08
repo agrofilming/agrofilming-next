@@ -35,6 +35,10 @@
   padding: 60px 60px 80px;
   min-height: 275px;
 
+  @include m.respond('sm') {
+    margin-bottom: 200px;
+  }
+
   .banners {
     @include m.flex(0, flex-start, space-between);
     position: relative;
@@ -90,7 +94,7 @@
     right: -60px;
 
     @include m.respond('sm') {
-      top: 40px;
+      top: 100px;
     }
 
     &:before {
