@@ -20,6 +20,7 @@ export const CreativeTeamBlock = () => (
       <Image src={creativeTeam} alt={'creative-team'} />
       <video
         autoPlay
+        muted
         src={'https://agrofilm.s3.eu-north-1.amazonaws.com/main/why_us_NEW.webm'}
         controlsList={'nodownload'}
       ></video>

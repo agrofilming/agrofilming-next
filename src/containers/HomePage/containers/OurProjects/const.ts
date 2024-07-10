@@ -28,6 +28,11 @@ export const projects = [
     description: 'Description',
   },
   {
+    img: quantum,
+    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/Quantum_promo_En_MASTER.webm',
+    title: 'Промо відеоролик',
+  },
+  {
     img: ovochar,
     video:
       'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_%D0%9E%D0%B2%D0%BE%D1%87%D0%B0%D1%80.webm',
@@ -97,11 +102,6 @@ export const projects = [
     img: afina,
     video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/AgroFilmProduction_Afina_Pallada.webm',
     title: 'Анонс YouTube випуску',
-  },
-  {
-    img: quantum,
-    video: 'https://agrofilm.s3.eu-north-1.amazonaws.com/project/Quantum_promo_En_MASTER.webm',
-    title: 'Промо відеоролик',
   },
 ];
 
