@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import logo from '@/assets/images/footer-logo-leaf.png';
-import logoSolo from '@/assets/images/footer-logo-solo.png';
+import logoSolo from '@/assets/images/footer-logo.png';
 
 import styles from './index.module.scss';
 import { Contacts } from '@/components/Contacts';
@@ -13,7 +12,6 @@ export const Footer = () => {
   return (
     <footer className={styles.container} id={'contacts'}>
       <div className={styles.copyright}>
-        <Image src={logo} alt="footer-logo" className={styles.logo} />
         <Image src={logoSolo} alt="footer-logo" className={styles.logoSolo} />
         <span>Copyright © {year} AgroFilmProduction</span>
       </div>

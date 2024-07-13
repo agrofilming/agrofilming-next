@@ -13,7 +13,6 @@ import lg from '@/assets/images/partners/lg.webp';
 import quantum from '@/assets/images/partners/quantum.webp';
 import spectr from '@/assets/images/partners/spectr-agro.webp';
 import unifer from '@/assets/images/partners/unifer.webp';
-import scania from '@/assets/images/partners/scania.webp';
 import { PartnerItem } from '@/containers/HomePage/containers/OurPartners/components/PartnerItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -24,27 +23,7 @@ import 'swiper/css/navigation';
 import { useMedia } from '@/hooks/useMedia';
 import { useMemo } from 'react';
 
-const partnersList = [
-  agroOnline,
-  asu,
-  bizon,
-  droneua,
-  inforce,
-  lg,
-  quantum,
-  spectr,
-  unifer,
-  agroOnline,
-  asu,
-  bizon,
-  droneua,
-  inforce,
-  lg,
-  quantum,
-  spectr,
-  unifer,
-  scania,
-];
+const partnersList = [agroOnline, asu, bizon, droneua, inforce, lg, quantum, spectr, unifer];
 export const OurPartners = () => {
   const isMobile = useMedia('(max-width: 767px)');
   const isTablet = useMedia('(max-width: 1023px)');
@@ -81,6 +60,7 @@ export const OurPartners = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
+          loop={true}
           modules={[Autoplay]}
           className={styles.swiper}
         >

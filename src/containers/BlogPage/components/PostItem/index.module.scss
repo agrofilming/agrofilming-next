@@ -29,4 +29,9 @@
   button {
     margin-bottom: 20px;
   }
+
+  @include m.respond('md') {
+    width: 100%;
+    max-width: 100vw;
+  }
 }

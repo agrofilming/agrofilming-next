@@ -36,7 +36,7 @@
   min-height: 275px;
 
   @include m.respond('sm') {
-    margin-bottom: 200px;
+    margin-bottom: 50px;
   }
 
   .banners {
@@ -47,16 +47,17 @@
 
     .blue-banner {
       position: relative;
-      top: 80px;
+      top: 83px;
 
       @include m.respond('lg') {
         top: 10px;
       }
 
       @include m.respond('sm') {
-        width: 90vw;
-        top: 50px;
+        width: 50vw;
+        top: 150px;
         left: -50px;
+        transform: rotate(-10deg);
       }
     }
 
@@ -72,7 +73,8 @@
 
       @include m.respond('sm') {
         width: 90vw;
-        right: -20px;
+        top: 0;
+        right: -50px;
       }
     }
 
@@ -94,7 +96,8 @@
     right: -60px;
 
     @include m.respond('sm') {
-      top: 100px;
+      top: 50px;
+      right: -180px;
     }
 
     &:before {
@@ -124,6 +127,12 @@
       text-align: center;
       margin-top: 10px;
       transform: rotateZ(-20deg);
+
+      @include m.respond('sm') {
+        top: 0;
+        left: -70px;
+        transform: rotateZ(20deg);
+      }
     }
 
     svg {
@@ -152,6 +161,10 @@
     overflow: hidden;
     z-index: 1;
     top: 220px;
+
+    @include m.respond('md') {
+      display: none;
+    }
 
     video {
       width: 100%;
