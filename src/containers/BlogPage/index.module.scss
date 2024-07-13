@@ -21,6 +21,8 @@
     flex-wrap: wrap;
 
     @include m.respond('md') {
+      @include m.flex(50px, center, center, column);
+      width: 100%;
       padding: 0 20px;
     }
   }

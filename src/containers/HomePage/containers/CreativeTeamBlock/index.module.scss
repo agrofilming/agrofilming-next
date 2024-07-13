@@ -33,9 +33,9 @@
     }
 
     h2 {
-      @include m.typography(50px, 55px, 700, #4c5558);
+      @include m.typography(60px, 65px, 700, #4c5558);
       text-align: center;
-      padding-right: 90px;
+      padding-right: 40px;
     }
 
     a {
@@ -87,6 +87,7 @@
       max-width: 600px;
       width: 100%;
       height: auto;
+      scale: 1.15;
     }
   }
 
@@ -102,6 +103,8 @@
       max-width: 900px;
       width: 100%;
       height: auto;
+      position: relative;
+      top: -70px;
 
       @include m.respond('lg') {
         max-width: 600px;
@@ -109,6 +112,7 @@
 
       @include m.respond('md') {
         margin-right: 10px;
+        top: -30px;
       }
     }
 

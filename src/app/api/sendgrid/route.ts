@@ -7,7 +7,7 @@ export async function POST(req: any) {
     const data = await req.json();
 
     const msg = {
-      to: `annet23101995@gmail.com`, // Change to your recipient
+      to: `producer@agrofilming.com`, // Change to your recipient
       from: `agrofilming@gmail.com`, // Change to your verified sender
       subject: `${data.clientName} залишив заявку на відео`,
       text: 'which contains some text',

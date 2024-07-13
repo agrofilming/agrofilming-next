@@ -5,6 +5,10 @@
   @include m.flex(10px, center, flex-start, column);
   padding: 0 0 100px;
   position: relative;
+  background-image: url('/post-bg.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 
   .title-img {
     @include m.flex(0, center, center, column);
@@ -33,6 +37,7 @@
   .main-desc {
     width: 80%;
     padding-left: 50px;
+    margin-bottom: 20px;
 
     p {
       @include m.typography(20px, 26px, 400, v.$color-dark-blue);

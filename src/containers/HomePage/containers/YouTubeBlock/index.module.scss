@@ -2,13 +2,13 @@
 @use '@/styles/mixins' as m;
 
 .container {
-  @include m.flex(60px, center, center, column);
+  @include m.flex(60px, center, space-between, column);
   position: relative;
   background-image: url('/youtube_red.webp');
 
   background-size: cover;
   min-height: 100vh;
-  padding: 50px;
+  padding: 50px 0 0;
 
   @include m.respond('lg') {
     @include m.flex(60px, center, flex-start, column);
