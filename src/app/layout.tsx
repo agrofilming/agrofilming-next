@@ -37,6 +37,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <TagCarousel />
+
         <Link href="mailto:producer@agrofilming.com">
           <LeadSeeker
             colorMain={'#1C9E00'}

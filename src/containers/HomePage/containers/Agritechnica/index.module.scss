@@ -34,6 +34,7 @@
   background-size: cover;
   padding: 60px 60px 80px;
   min-height: 275px;
+  overflow: hidden;
 
   @include m.respond('sm') {
     margin-bottom: 50px;
@@ -129,6 +130,7 @@
       transform: rotateZ(-20deg);
 
       @include m.respond('sm') {
+        @include m.typography(18px, 18px, 400, v.$color-black);
         top: 0;
         left: -70px;
         transform: rotateZ(20deg);
