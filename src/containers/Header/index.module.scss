@@ -67,9 +67,9 @@
 }
 
 .nav-mobile {
-  @include m.flex(20px, flex-start, flex-start, column);
+  @include m.flex(20px, center, center, column);
   width: 100vw;
   height: 100vh;
-  background-color: v.$color-dark-blue;
+  background-color: v.$color-black;
   padding: 30px;
 }

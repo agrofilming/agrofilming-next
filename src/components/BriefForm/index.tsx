@@ -71,7 +71,6 @@ export const BriefForm = () => {
           options={budgetOptions}
           control={control}
           watch={watch}
-          filter={false}
         />
 
         <Select
@@ -81,7 +80,6 @@ export const BriefForm = () => {
           required={false}
           control={control}
           watch={watch}
-          filter={false}
         />
 
         {loading ? (

@@ -7,11 +7,18 @@ import Link from 'next/link';
 export const CreativeTeamBlock = () => (
   <section className={styles.container} id={'about-us'}>
     <div className={styles['top-block']}>
+      <h2 className={styles.mobile}>
+        *З НАМИ ЗАВЖДИ <br />
+        КАЙФОВО ПРАЦЮВАТИ
+      </h2>
+
       <Image src={dwwr} alt={'not-work-with-ru'} />
+
       <Link href={'/brief'}>
         ХОЧУ <br /> ВІДЕО
       </Link>
-      <h2>
+
+      <h2 className={styles.desktop}>
         *З НАМИ ЗАВЖДИ <br />
         КАЙФОВО ПРАЦЮВАТИ
       </h2>
@@ -21,6 +28,7 @@ export const CreativeTeamBlock = () => (
       <video
         autoPlay
         muted
+        loop
         src={'https://agrofilm.s3.eu-north-1.amazonaws.com/main/why_us_NEW.webm'}
         controlsList={'nodownload'}
       ></video>

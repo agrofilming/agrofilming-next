@@ -35,6 +35,10 @@
     bottom: 15px;
     z-index: -1;
 
+    @include m.respond('md') {
+      left: 0;
+    }
+
     .logo {
       max-width: 550px;
       height: auto;
@@ -59,6 +63,9 @@
       @include m.respond('xl') {
         opacity: 0.1;
       }
+      @include m.respond('md') {
+        left: -150px;
+      }
     }
 
     span {
@@ -75,7 +82,7 @@
     z-index: 2;
 
     @include m.respond('md') {
-      @include m.flex(10px, center, flex-start, column);
+      @include m.flex(50px, center, flex-start, column);
     }
 
     .nav-top-section {

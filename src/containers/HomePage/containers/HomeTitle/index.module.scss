@@ -32,7 +32,8 @@
   position: relative;
 
   @include m.respond('md') {
-    min-height: 90vh;
+    min-height: 50vh;
+    height: 80vh;
     overflow: hidden;
     background: v.$color-black;
   }
@@ -41,7 +42,7 @@
     @include m.typography(17px, 21px, 300, v.$color-white);
     position: absolute;
     top: 130px;
-    left: 50px;
+    left: 20px;
 
     @include m.respond('lg') {
       top: 100px;
@@ -51,13 +52,14 @@
       @include m.typography(16px, 20px, 300, v.$color-white);
       max-width: 360px;
       top: 80px;
+      z-index: 2;
     }
   }
 
   h1 {
     position: absolute;
     top: 150px;
-    left: 50px;
+    left: 20px;
 
     span {
       @include m.typography(107px, 120px, 900, #ffffff00);
@@ -70,6 +72,7 @@
     @include m.respond('lg') {
       @include m.typography(80px, 100px, 900, v.$color-white);
       top: 120px;
+      z-index: 2;
 
       span {
         @include m.typography(80px, 100px, 900, #ffffff00);
@@ -156,8 +159,9 @@
     @include m.respond('md') {
       width: auto;
       height: auto;
+      top: -300px;
       left: -800px;
-      scale: 0.5;
+      scale: 0.6;
       z-index: 0;
     }
   }

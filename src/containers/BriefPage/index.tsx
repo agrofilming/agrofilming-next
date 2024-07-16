@@ -27,11 +27,12 @@ export const BriefPage = () => {
         </h2>
 
         <div className={styles.contacts}>
-          <Link className={styles['contacts-item']} href="tel:+380688880710">
+          <Link className={styles['contacts-item']} href="tel:+380666667098">
             <p>Менеджер по роботі з клієнтами</p>
             <div>
               <PhoneIcon />
-              <span>+38 (068) 888-07-10</span>
+
+              <span>+38 (066) 666-70-98</span>
             </div>
           </Link>
           <Link className={styles['contacts-item']} href="mailto:producer@agrofilming.com">

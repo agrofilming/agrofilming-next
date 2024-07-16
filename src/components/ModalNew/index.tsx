@@ -28,10 +28,6 @@ export const Modal: FC<IModalProps> = ({
       footer={null}
       centered
     >
-      {/*
-        onCLick is used to prevent event propagation outside of the modal and help to avoid
-        triggering navigation or other unintended side effects (e.g., clicks on buttons or links)
-      */}
       <div
         onClick={e => e.stopPropagation()}
         className="modal-container"

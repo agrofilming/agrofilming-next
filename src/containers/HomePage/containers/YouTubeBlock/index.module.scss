@@ -25,7 +25,7 @@
     text-align: center;
 
     @include m.respond('lg') {
-      @include m.typography(30px, 40px, 500, v.$color-cream-light);
+      @include m.typography(24px, 32px, 500, v.$color-cream-light);
     }
 
     span {

@@ -37,7 +37,7 @@
   overflow: hidden;
 
   @include m.respond('sm') {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 
   .banners {
