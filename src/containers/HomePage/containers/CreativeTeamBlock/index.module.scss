@@ -21,21 +21,43 @@
 
   @include m.respond('lg') {
     overflow: hidden;
+    padding: 30px 0;
   }
 
   .top-block {
     @include m.flex(30px, center, space-between);
     width: 100%;
     position: relative;
+    padding-left: 30px;
 
     @include m.respond('lg') {
       @include m.flex(30px, center, center, column);
+    }
+
+    .mobile {
+      display: none;
+
+      @include m.respond('md') {
+        display: block;
+      }
+    }
+
+    .desktop {
+      display: block;
+
+      @include m.respond('md') {
+        display: none;
+      }
     }
 
     h2 {
       @include m.typography(60px, 65px, 700, #4c5558);
       text-align: center;
       padding-right: 40px;
+
+      @include m.respond('md') {
+        @include m.typography(30px, 35px, 700, #4c5558);
+      }
     }
 
     a {
@@ -97,6 +119,7 @@
 
     @include m.respond('md') {
       @include m.flex(30px, center, center, column);
+      padding-left: 30px;
     }
 
     img {

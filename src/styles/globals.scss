@@ -258,6 +258,13 @@ video {
       width: 40px;
       height: 40px;
       z-index: 2;
+
+      @include m.respond('sm') {
+        right: 15px;
+        top: 15px;
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
@@ -302,7 +309,7 @@ video {
 
   .ant-checkbox-group-item {
     span {
-      @include m.typography(14px, 25px, 400, v.$color-dark-blue);
+      @include m.typography(14px, 18px, 400, v.$color-dark-blue);
     }
   }
 }

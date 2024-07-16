@@ -33,7 +33,6 @@ export const OurProjects = () => {
           {youTubeLinks.map((el, index) => (
             <iframe
               key={index}
-              height="300p"
               src={el}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

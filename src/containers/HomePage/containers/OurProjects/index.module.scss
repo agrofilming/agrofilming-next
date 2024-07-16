@@ -118,6 +118,7 @@
 
       iframe {
         width: 33.3vw;
+        height: 300px;
 
         @include m.respond('lg') {
           width: 50vw;
@@ -125,6 +126,7 @@
 
         @include m.respond('md') {
           width: 100vw;
+          height: 200px;
         }
       }
     }

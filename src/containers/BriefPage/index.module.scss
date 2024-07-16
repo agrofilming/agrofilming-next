@@ -18,13 +18,14 @@
     @include m.respond('md') {
       @include m.flex(30px, center, center, column);
       margin-top: 50px;
+      padding-top: 0;
     }
 
     .contacts {
       @include m.flex(30px, flex-start, center, column);
 
       @include m.respond('md') {
-        @include m.flex(30px, center, center, column);
+        @include m.flex(30px, flex-start, flex-start, column);
       }
 
       a {
@@ -34,12 +35,16 @@
         cursor: pointer;
 
         @include m.respond('md') {
-          @include m.flex(30px, center, center, column);
+          @include m.flex(30px, flex-start, center, column);
         }
 
         div {
           @include m.flex(10px, center, flex-start);
           padding-left: 20px;
+
+          @include m.respond('md') {
+            padding-left: 0;
+          }
         }
 
         &:hover {
