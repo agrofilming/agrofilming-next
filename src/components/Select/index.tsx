@@ -36,9 +36,7 @@ export const Select: FC<ISelectProps> = ({
     [],
   );
 
-  useEffect(() => {
-    return dropdownOpen ? disableBodyScroll(ref.current!) : enableBodyScroll(ref.current!);
-  }, [dropdownOpen]);
+  useEffect(() => (dropdownOpen ? disableBodyScroll(ref.current!) : enableBodyScroll(ref.current!)), [dropdownOpen]);
 
   return (
     <>
