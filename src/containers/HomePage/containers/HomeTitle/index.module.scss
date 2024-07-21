@@ -51,7 +51,7 @@
     @include m.respond('md') {
       @include m.typography(16px, 20px, 300, v.$color-white);
       max-width: 360px;
-      top: 80px;
+      top: 140px;
       z-index: 2;
     }
   }
@@ -71,7 +71,7 @@
 
     @include m.respond('lg') {
       @include m.typography(80px, 100px, 900, v.$color-white);
-      top: 120px;
+      top: 180px;
       z-index: 2;
 
       span {
@@ -159,7 +159,7 @@
     @include m.respond('md') {
       width: auto;
       height: auto;
-      top: -300px;
+      top: -200px;
       left: -800px;
       scale: 0.6;
       z-index: 0;

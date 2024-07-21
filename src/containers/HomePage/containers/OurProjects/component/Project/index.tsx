@@ -18,7 +18,7 @@ export const Project: FC<IProject> = ({ video, img, title }) => {
         <h4>{title}</h4>
       </div>
       <Modal open={modalOpen} onCancel={() => setModalOpen(false)} showClose>
-        <video src={video} autoPlay={modalOpen} controlsList={'nodownload'} controls={true}></video>
+        <video src={video} autoPlay={modalOpen} controlsList={'nodownload'} controls={true} playsInline></video>
       </Modal>
     </div>
   );

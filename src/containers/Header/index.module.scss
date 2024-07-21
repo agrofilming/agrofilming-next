@@ -8,11 +8,6 @@
   position: fixed;
   z-index: 99;
 
-  @include m.respond('sm') {
-    position: relative;
-    background-color: v.$color-black;
-  }
-
   .nav {
     @include m.flex(0, center, space-between);
 
