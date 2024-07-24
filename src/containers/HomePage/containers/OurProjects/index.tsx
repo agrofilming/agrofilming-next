@@ -20,10 +20,12 @@ export const OurProjects = () => {
   return (
     <section className={styles.container} id={'portfolio'}>
       <div className={styles.projects}>{renderProjects}</div>
+
       <div className={cn(styles['more-button'], { [styles.open]: isOpen })} onClick={() => setIsOpen(true)}>
         <ArrowIcon />
         <p>Більше робіт</p>
       </div>
+
       <div className={cn(styles['video-reviews'], { [styles.open]: isOpen })}>
         <div className={styles['video-list']}>
           <h3>
