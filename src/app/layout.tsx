@@ -11,6 +11,8 @@ import { LeadSeeker } from '@/components/LeadSeaker';
 import { MailIcon } from '@/assets/icons/mailIcon';
 import { PhoneIcon } from '@/assets/icons/phoneIcon';
 import Link from 'next/link';
+import { Suspense } from 'react';
+import { Spin } from 'antd';
 
 export const metadata: Metadata = {
   title: 'AgroFilmProduction - відео для агробізнесу',
@@ -35,7 +37,9 @@ export default function RootLayout({
     <html lang="en" className={alegreyaSansSC.className}>
       <body>
         <Header />
-        <main>{children}</main>
+        <Suspense fallback={<Spin />}>
+          <main>{children}</main>
+        </Suspense>
         <TagCarousel />
 
         <Link href="mailto:producer@agrofilming.com">
