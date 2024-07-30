@@ -34,6 +34,10 @@
     }
   }
 
+  .phone-input {
+    width: 100%;
+  }
+
   input {
     @include m.typography(14px, 17px, 500, v.$color-black);
     width: 100%;

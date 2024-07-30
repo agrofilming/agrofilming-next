@@ -31,4 +31,9 @@
   width: 500px;
   background: v.$color-white;
   border-radius: 30px;
+
+  @include m.respond('md') {
+    width: 100%;
+    padding: 10px;
+  }
 }

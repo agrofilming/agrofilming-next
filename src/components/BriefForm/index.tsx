@@ -5,7 +5,7 @@ import { CheckboxForForm } from '@/components/CheckboxForForm';
 import { budgetOptions, defaultValues, findOptions, questionData } from '@/components/BriefForm/const';
 import { useForm } from 'react-hook-form';
 import { IStepperForm } from '@/containers/BriefPage/interface';
-import { EmailInput, PhoneInput, TextInput } from '@/components/Input';
+import { EmailInput, Phone, TextInput } from '@/components/Input';
 import { Select } from '@/components/Select';
 import { Button } from '@/components';
 import { useState } from 'react';
@@ -63,7 +63,7 @@ export const BriefForm = () => {
 
         <EmailInput register={register} errorMessage={errors.email?.message} />
 
-        <PhoneInput control={control} errorMessage={errors.phone?.message} />
+        <Phone control={control} errorMessage={errors.phone?.message} />
 
         <Select
           name={'budget'}
