@@ -5,11 +5,19 @@
   @include m.flex(0, center, flex-start, column);
   padding-bottom: 30px;
 
+  @include m.respond('md') {
+    padding-top: 100px;
+  }
+
   > img {
     position: relative;
     width: 100%;
     height: auto;
     top: -90px;
+
+    @include m.respond('md') {
+      display: none;
+    }
   }
 
   h1 {

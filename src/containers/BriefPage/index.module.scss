@@ -18,7 +18,7 @@
     @include m.respond('md') {
       @include m.flex(30px, center, center, column);
       margin-top: 50px;
-      padding-top: 0;
+      padding-top: 50px;
     }
 
     .contacts {

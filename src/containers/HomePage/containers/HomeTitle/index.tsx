@@ -22,6 +22,7 @@ export const HomeTitle = () => {
         muted
         playsInline
         loop
+        preload={'none'}
         src={`https://agrofilm.s3.eu-north-1.amazonaws.com/main/SHOWREEL_for_site_17sec.webm`}
       />
       <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>

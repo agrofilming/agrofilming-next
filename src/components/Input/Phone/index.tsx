@@ -5,10 +5,10 @@ import { FC } from 'react';
 
 import styles from './index.module.scss';
 import { IPhoneInputProps } from './interfaces';
-import InputMask from 'react-input-mask';
 import { Controller } from 'react-hook-form';
+import PhoneInput from 'react-phone-input-2';
 
-export const PhoneInput: FC<IPhoneInputProps> = ({ control, errorMessage }) => {
+export const Phone: FC<IPhoneInputProps> = ({ control, errorMessage }) => {
   return (
     <div className={cn(styles.container, { [styles.error]: errorMessage })}>
       <Controller
@@ -19,12 +19,22 @@ export const PhoneInput: FC<IPhoneInputProps> = ({ control, errorMessage }) => {
           validate: { validPhone: value => /^\+\d{11,12}$/gm.test(value) || 'Невірний формат' },
         }}
         render={({ field: { ref, onChange, ...rest } }) => (
-          <InputMask
-            mask=""
-            placeholder="+380 XX XXX XXXX"
-            inputRef={ref}
-            onChange={event => onChange(event.target.value.replace(/\s/g, ''))}
+          <PhoneInput
             {...rest}
+            inputProps={{
+              ref,
+              required: true,
+              autoFocus: true,
+            }}
+            country="ua"
+            countryCodeEditable={false}
+            containerClass={styles['phone-input']}
+            onlyCountries={['ua']}
+            onChange={value => {
+              // Ensure the value always starts with '+'
+              const valueWithPlus = value.startsWith('+') ? value : `+${value}`;
+              onChange(valueWithPlus); // Update the value with '+' prefix
+            }}
           />
         )}
       />

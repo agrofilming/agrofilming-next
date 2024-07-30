@@ -8,6 +8,10 @@
   position: fixed;
   z-index: 99;
 
+  @include m.respond('md') {
+    @include m.container(15px 20px, #000000cc);
+  }
+
   .nav {
     @include m.flex(0, center, space-between);
 
