@@ -8,12 +8,16 @@ import logo from '@/assets/images/logo.png';
 import styles from './index.module.scss';
 import { Button } from '@/components';
 import { BurgerIcon } from '@/assets/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal } from '@/components/ModalNew';
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = (isOpen: boolean) => () => setOpen(isOpen);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <header className={styles.container}>

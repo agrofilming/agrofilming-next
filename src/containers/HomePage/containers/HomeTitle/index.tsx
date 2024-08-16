@@ -1,8 +1,9 @@
 'use client';
 import styles from './index.module.scss';
 import { PlayIcon } from '@/assets/icons/playIcon';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { Modal } from '@/components/ModalNew';
+import { Spin } from 'antd';
 
 export const HomeTitle = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,15 +17,17 @@ export const HomeTitle = () => {
       <div className={styles['video-button']} onClick={() => setModalOpen(true)}>
         <PlayIcon />
       </div>
-      <video
-        className={styles['video-bg']}
-        autoPlay
-        muted
-        playsInline
-        loop
-        preload={'none'}
-        src={`https://agrofilm.s3.eu-north-1.amazonaws.com/main/SHOWREEL_for_site_17sec.webm`}
-      />
+      <Suspense fallback={<Spin />}>
+        <video
+          className={styles['video-bg']}
+          autoPlay
+          muted
+          playsInline
+          loop
+          preload={'none'}
+          src={`https://agrofilm.s3.eu-north-1.amazonaws.com/main/SHOWREEL_for_site_17sec.webm`}
+        />
+      </Suspense>
       <Modal open={modalOpen} onCancel={() => setModalOpen(false)}>
         <video
           src={'https://agrofilm.s3.eu-north-1.amazonaws.com/main/SHOWREEL_AgroFilmProduction_v4.webm'}
