@@ -107,7 +107,7 @@
     }
 
     p {
-      @include m.typography(15px, 15px, 100, v.$color-cream);
+      @include m.typography(25px, 15px, 300, v.$color-cream);
     }
 
     a:hover {
