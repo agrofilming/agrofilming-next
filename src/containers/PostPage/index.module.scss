@@ -80,7 +80,7 @@
     }
 
     p {
-      @include m.typography(20px, 24px, 300, v.$color-dark-blue);
+      @include m.typography(20px, 24px, 500, v.$color-dark-blue);
     }
   }
 
