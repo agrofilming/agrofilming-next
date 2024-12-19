@@ -10,7 +10,7 @@ export const YouTubeBlock = () => (
       Працювали над усіма випусками YouTube каналу <br />
       <span>&quot;Агробізнес Без Цензури&quot;</span>
     </h2>
-    <Link href={'https://www.youtube.com/@user-lg7jl4je3e/videos'} target={'_blank'}>
+    <Link href={'https://www.youtube.com/channel/UCJ5o24w4uGFX1Bk7pGDIymQ/videos'} target={'_blank'}>
       <button>Перейти на канал</button>
     </Link>
     <Image src={desktop} alt={'desktop'} />
