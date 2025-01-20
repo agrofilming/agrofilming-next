@@ -10,7 +10,7 @@ export const Contacts = () => (
       <Image src={phone} alt="phone" />
       <div>
         <p>Менеджер по роботі з клієнтами</p>
-        <span>+38 (066) 666-70-98</span>
+        <span>+38 (063) 153-32-77</span>
       </div>
     </Link>
     <Link className={styles['contacts-item']} href="mailto:producer@agrofilming.com">
