@@ -34,7 +34,7 @@
 
     @include m.respond('md') {
       top: -20px;
-      height: 90%;
+      height: 110%;
       background-size: cover;
       transform: rotate(0);
     }
@@ -77,7 +77,7 @@
     }
 
     img {
-      max-width: 500px;
+      max-width: 300px;
       height: auto;
       position: relative;
       right: -100px;
