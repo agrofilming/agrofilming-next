@@ -27,7 +27,7 @@ const partnersList = [agroOnline, asu, bizon, droneua, inforce, lg, quantum, spe
 export const OurPartners = () => {
   const isMobile = useMedia('(max-width: 767px)');
   const isTablet = useMedia('(max-width: 1023px)');
-  const isDesktop = useMedia('(max-width: 779px)');
+  const isDesktop = useMedia('(max-width: 1279px)');
   const isLaptop = useMedia('(max-width: 1439px)');
 
   const slidesPerView = useMemo(() => {
